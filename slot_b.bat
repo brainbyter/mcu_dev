@@ -1,0 +1,1 @@
+C:\MinGW\msys\1.0\bin\make -j12 slot_type=SLOT_B
