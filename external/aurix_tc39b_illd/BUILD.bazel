@@ -1,0 +1,118 @@
+package(default_visibility = ["//visibility:public"])
+
+COPTS = select({
+    "@esw//toolchains:tri_core": [
+        # 529: overflow in constant expression of type "unsigned long int"
+        # 532: incompatible enum types at assignment
+        # 549: condition is always true
+        # 560: possible truncation at implicit conversion to type "float"
+        # 572: misrac related violation
+        # 587: underflow on constant of type "float"
+        "--pass-c=--no-warnings=+529,+532,+549,+560,+572,+587",
+    ],
+    "//conditions:default": [],
+})
+
+config_setting(
+    name = "tc39b_single_core_lib",
+    values = {
+        "define": "tc39b_lib_type=tc39b_single_core",
+    },
+)
+
+alias(
+    name = "aurix_tc39b_illd_lib",
+    actual = select({
+        "tc39b_single_core_lib": ":aurix_tc39b_illd_single_core_lib",
+        "//conditions:default": ":aurix_tc39b_illd_multi_core_lib",
+    }),
+)
+
+cc_library(
+    name = "aurix_tc39b_illd_multi_core_lib",
+    srcs = glob([
+        "Infra/Ssw/TC39B/Tricore/*.c",
+    ]),
+    copts = COPTS,
+    alwayslink = 1,
+    deps = [
+      ":aurix_tc39b_illd_common_lib",
+    ],
+)
+
+# The aurix_tc39b_illd_single_core_lib will only compile files that core 0 relative.
+# When TC39b power on, core 0 start first and then wake other cores one by one.
+# So if we want a single core version, we can only select core 0 as the core.
+cc_library(
+    name = "aurix_tc39b_illd_single_core_lib",
+    srcs = [
+        "Infra/Ssw/TC39B/Tricore/Ifx_Ssw_Tc0.c",
+        "Infra/Ssw/TC39B/Tricore/Ifx_Ssw_Infra.c",
+    ],
+    copts = COPTS,
+    alwayslink = 1,
+    deps = [
+      ":aurix_tc39b_illd_common_lib",
+    ],
+)
+
+cc_library(
+    name = "aurix_tc39b_illd_bmhd_lib",
+    srcs = [
+        "config/Ifx_Cfg_SswBmhd.c",
+    ],
+    hdrs = glob([
+        "config/*.h",
+    ]),
+    includes = [
+        "config",
+    ],
+    copts = COPTS,
+    alwayslink = 1,
+    deps = [
+      ":aurix_tc39b_illd_lib",
+      "@esw//platform/product/common:pony_system",
+    ],
+)
+
+cc_library(
+    name = "aurix_tc39b_illd_common_lib",
+    srcs = [
+        "config/Ifx_Cfg_Ssw.c",
+        "config/Debug/sync_on_halt.c",
+    ] + glob([
+        "iLLD/TC39B/Tricore/**/*.c",
+        "Infra/Platform/Tricore/Compilers/*.c",
+        "Service/**/*.c",
+    ]),
+    hdrs = glob([
+        "config/*.h",
+        "iLLD/TC39B/Tricore/**/*.h",
+        "Infra/Platform/Tricore/Compilers/*.h",
+        "Infra/Ssw/TC39B/Tricore/*.h",
+        "Service/**/*.h",
+    ]),
+    includes = [
+        ".",
+        "config",
+        "Infra/Platform",
+        "Infra/Sfr/TC39B/_Reg",
+        "Service",
+        "Service/CpuGeneric",
+        "iLLD/TC39B/Tricore",
+        "iLLD/TC39B/Tricore/Cpu/Irq",
+        "iLLD/TC39B/Tricore/Cpu/Std",
+        "iLLD/TC39B/Tricore/Geth/Eth",
+        "iLLD/TC39B/Tricore/Pms/Std",
+        "iLLD/TC39B/Tricore/Port/Std",
+        "iLLD/TC39B/Tricore/Scu/Std",
+        "iLLD/TC39B/Tricore/_Impl",
+        "Infra/Ssw/TC39B/Tricore",
+        "Service/CpuGeneric/SysSe/Bsp",
+    ],
+    copts = COPTS,
+    alwayslink = 1,
+    deps = [
+      "@esw//platform/device/bsp:Ifx_Cfg_Trap",
+    ],
+)

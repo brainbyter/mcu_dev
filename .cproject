@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.tasking.config.mcs.abs.debug.1568655101">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.tasking.config.mcs.abs.debug.1568655101" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.tasking.managedbuilder.TASKING_IHEX" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_SRECORD" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TskRegexErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="MCU_SDK" buildArtefactType="com.tasking.mcs.buildArtefactType.elf" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.tasking.mcs.buildArtefactType.elf" cleanCommand="&quot;${PRODDIR}/bin/rm&quot; -rf" description="" id="com.tasking.config.mcs.abs.debug.1568655101" name="Debug" parent="com.tasking.config.mcs.abs.debug">
+					<folderInfo id="com.tasking.config.mcs.abs.debug.1568655101." name="/" resourcePath="">
+						<toolChain id="com.tasking.mcs.abs.debug.1061121070" name="TASKING VX-toolset for MCS" nonInternalBuilderId="com.tasking.mcs.builder.abs.debug" superClass="com.tasking.mcs.abs.debug">
+							<option id="com.tasking.mcs.pluginVersion.1887713716" name="Plugin version" superClass="com.tasking.mcs.pluginVersion" value="1.238.0.0" valueType="string"/>
+							<option id="com.tasking.mcs.prodDir.1813585212" name="Product directory:" superClass="com.tasking.mcs.prodDir" value="${eclipse_home}/../../cmcs" valueType="string"/>
+							<option id="com.tasking.mcs.cpu.1820931635" name="Processor:" superClass="com.tasking.mcs.cpu" value="tc39xb" valueType="string"/>
+							<option id="com.tasking.mcs.coreSelection.883358603" name="Use core:" superClass="com.tasking.mcs.coreSelection" value="mcs06" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="com.tasking.managedbuilder.TASKING_ELF;com.tasking.managedbuilder.TASKING_SRECORD;com.tasking.managedbuilder.TASKING_IHEX" id="com.tasking.mcs.platform.abs.debug.980957986" name="Debug" osList="" superClass="com.tasking.mcs.platform.abs.debug"/>
+							<builder arguments="-j12 slot_type=SLOT_A" buildPath="${workspace_loc:/MCU_SDK}/Debug" command="C:\MinGW\msys\1.0\bin\make" id="com.tasking.mcs.builder.abs.debug.511530937" keepEnvironmentInBuildfile="false" name="TASKING MCS Makefile generator" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.tasking.mcs.builder.abs.debug"/>
+							<tool id="com.tasking.mcs.cc.abs.debug.1341672015" name="C Compiler" superClass="com.tasking.mcs.cc.abs.debug">
+								<option id="com.tasking.mcs.cc.pr36858.954523521" name="workaround for PR36858" superClass="com.tasking.mcs.cc.pr36858" value="true" valueType="string"/>
+								<inputType id="com.tasking.mcs.cpp.cInputType.817027147" name="C" superClass="com.tasking.mcs.cpp.cInputType"/>
+								<inputType id="com.tasking.mcs.cc.msInputType.589356714" name="MS" superClass="com.tasking.mcs.cc.msInputType"/>
+							</tool>
+							<tool id="com.tasking.mcs.as.abs.debug.1780256962" name="Assembler" superClass="com.tasking.mcs.as.abs.debug">
+								<inputType id="com.tasking.mcs.asmInputType.1705884106" name="ASM" superClass="com.tasking.mcs.asmInputType"/>
+							</tool>
+							<tool id="com.tasking.mcs.lk.abs.debug.68657395" name="Linker" superClass="com.tasking.mcs.lk.abs.debug">
+								<inputType id="com.tasking.mcs.lkObjInputType.626755918" name="OBJ" superClass="com.tasking.mcs.lkObjInputType"/>
+								<inputType id="com.tasking.mcs.lkLibInputType.266125404" name="LIB" superClass="com.tasking.mcs.lkLibInputType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule addStartupFiles="false" moduleId="com.tasking.processor"/>
+			<storageModule moduleId="com.tasking.toolInfo"/>
+			<storageModule moduleId="com.tasking.flash.settings"/>
+		</cconfiguration>
+		<cconfiguration id="com.tasking.config.mcs.abs.release.1473091018">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.tasking.config.mcs.abs.release.1473091018" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.tasking.managedbuilder.TASKING_IHEX" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_SRECORD" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TskRegexErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="MCU_SDK" buildArtefactType="com.tasking.mcs.buildArtefactType.elf" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.tasking.mcs.buildArtefactType.elf" cleanCommand="&quot;${PRODDIR}/bin/rm&quot; -rf" description="" id="com.tasking.config.mcs.abs.release.1473091018" name="Release" parent="com.tasking.config.mcs.abs.release">
+					<folderInfo id="com.tasking.config.mcs.abs.release.1473091018." name="/" resourcePath="">
+						<toolChain id="com.tasking.mcs.abs.release.2062766938" name="TASKING VX-toolset for MCS" superClass="com.tasking.mcs.abs.release">
+							<option id="com.tasking.mcs.pluginVersion.1693616584" name="Plugin version" superClass="com.tasking.mcs.pluginVersion" value="1.238.0.0" valueType="string"/>
+							<option id="com.tasking.mcs.prodDir.835199646" name="Product directory:" superClass="com.tasking.mcs.prodDir" value="${eclipse_home}/../../cmcs" valueType="string"/>
+							<option id="com.tasking.mcs.cpu.2100448899" name="Processor:" superClass="com.tasking.mcs.cpu" value="tc39xb" valueType="string"/>
+							<option id="com.tasking.mcs.coreSelection.854484047" name="Use core:" superClass="com.tasking.mcs.coreSelection" value="mcs06" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="com.tasking.managedbuilder.TASKING_ELF;com.tasking.managedbuilder.TASKING_SRECORD;com.tasking.managedbuilder.TASKING_IHEX" id="com.tasking.mcs.platform.abs.release.1343090775" name="Release" osList="" superClass="com.tasking.mcs.platform.abs.release"/>
+							<builder buildPath="${workspace_loc:/MCU_SDK}/Release" id="com.tasking.mcs.builder.abs.debug.569969763" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="TASKING MCS Makefile generator" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.tasking.mcs.builder.abs.debug"/>
+							<tool id="com.tasking.mcs.cc.abs.release.1103232476" name="C Compiler" superClass="com.tasking.mcs.cc.abs.release">
+								<option id="com.tasking.mcs.cc.pr36858.1675038657" name="workaround for PR36858" superClass="com.tasking.mcs.cc.pr36858" value="true" valueType="string"/>
+								<inputType id="com.tasking.mcs.cpp.cInputType.1456556321" name="C" superClass="com.tasking.mcs.cpp.cInputType"/>
+								<inputType id="com.tasking.mcs.cc.msInputType.679968035" name="MS" superClass="com.tasking.mcs.cc.msInputType"/>
+							</tool>
+							<tool id="com.tasking.mcs.as.abs.release.511263248" name="Assembler" superClass="com.tasking.mcs.as.abs.release">
+								<inputType id="com.tasking.mcs.asmInputType.673051939" name="ASM" superClass="com.tasking.mcs.asmInputType"/>
+							</tool>
+							<tool id="com.tasking.mcs.lk.abs.release.1811525907" name="Linker" superClass="com.tasking.mcs.lk.abs.release">
+								<inputType id="com.tasking.mcs.lkObjInputType.739617947" name="OBJ" superClass="com.tasking.mcs.lkObjInputType"/>
+								<inputType id="com.tasking.mcs.lkLibInputType.2016825633" name="LIB" superClass="com.tasking.mcs.lkLibInputType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule addStartupFiles="false" moduleId="com.tasking.processor"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="MCU_SDK.com.tasking.mcs.target.abs.1206117263" name="TASKING MCS Application" projectType="com.tasking.mcs.target.abs"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.tasking.config.mcs.abs.debug.1568655101;com.tasking.config.mcs.abs.debug.1568655101.">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.tasking.mcs.TskMCSScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.tasking.config.mcs.abs.release.1473091018;com.tasking.config.mcs.abs.release.1473091018.">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.tasking.mcs.TskMCSScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+		<project-mappings>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cHeader" language="com.tasking.mcs.clanguage"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cSource" language="com.tasking.mcs.clanguage"/>
+		</project-mappings>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/MCU_SDK"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/MCU_SDK"/>
+		</configuration>
+	</storageModule>
+</cproject>

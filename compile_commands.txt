@@ -1,0 +1,7 @@
+cd D:\workspace_ctc_v6.3r1\MCU_SDK
+
+C:\Users\igor.loginov\Desktop\MinGW\msys\1.0\bin\make -j12 slot_type=SLOT_A
+C:\Users\igor.loginov\Desktop\MinGW\msys\1.0\bin\make -j12 slot_type=SLOT_B
+
+C:\MinGW\bin\make -j12 slot_type=SLOT_A
+

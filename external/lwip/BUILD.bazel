@@ -1,0 +1,133 @@
+cc_library(
+    name = "lwip_headers",
+    hdrs = glob([
+        "src/include/*.h",
+        "src/include/lwip/*.h",
+        "src/include/lwip/priv/*.h",
+        "src/include/lwip/prot/*.h",
+        "src/include/netif/*.h",
+        "src/include/netif/ppp/*.h",
+    ]),
+    includes = [
+        "src/include",
+        "src/include/lwip",
+        "src/include/lwip/priv",
+        "src/include/lwip/prot",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "lwip",
+    srcs = [
+        "src/api/api_lib.c",
+        "src/api/api_msg.c",
+        "src/api/err.c",
+        "src/api/if_api.c",
+        "src/api/netbuf.c",
+        "src/api/netdb.c",
+        "src/api/netifapi.c",
+        "src/api/sockets.c",
+        "src/api/tcpip.c",
+        "src/core/altcp.c",
+        "src/core/altcp_alloc.c",
+        "src/core/altcp_tcp.c",
+        "src/core/def.c",
+        "src/core/dns.c",
+        "src/core/inet_chksum.c",
+        "src/core/init.c",
+        "src/core/ip.c",
+        "src/core/ipv4/autoip.c",
+        "src/core/ipv4/dhcp.c",
+        "src/core/ipv4/etharp.c",
+        "src/core/ipv4/icmp.c",
+        "src/core/ipv4/igmp.c",
+        "src/core/ipv4/ip4.c",
+        "src/core/ipv4/ip4_addr.c",
+        "src/core/ipv4/ip4_frag.c",
+        "src/core/mem.c",
+        "src/core/memp.c",
+        "src/core/netif.c",
+        "src/core/pbuf.c",
+        "src/core/raw.c",
+        "src/core/stats.c",
+        "src/core/sys.c",
+        "src/core/tcp.c",
+        "src/core/tcp_in.c",
+        "src/core/tcp_out.c",
+        "src/core/timeouts.c",
+        "src/core/udp.c",
+        "src/netif/ethernet.c",
+    ],
+    copts = select({
+        "@esw//toolchains:tri_core": [
+            # W549: condition is always true/false
+            # W588: dead assignment to variable eliminated
+            # W589: pointer assumed to be nonzero - test removed
+            "--pass-c=--no-warnings=+549,+588,+589",
+        ],
+        "//conditions:default": [
+            "-Werror",
+        ],
+    }),
+    visibility = ["//visibility:public"],
+    deps = [
+        ":lwip_headers",
+        "@esw//platform/device/driver/lwip:arch",
+    ],
+)
+
+cc_library(
+    name = "httpd",
+    srcs = [
+        "src/apps/http/altcp_proxyconnect.c",
+        "src/apps/http/fs.c",
+        "src/apps/http/fsdata.c",
+        "src/apps/http/http_client.c",
+        "src/apps/http/httpd.c",
+    ] + [
+        "src/apps/http/fsdata.h",
+        "src/apps/http/httpd_structs.h",
+    ],
+    hdrs = [
+        # this one is used in "#include"
+        "src/apps/http/fsdata.c",
+        "src/include/lwip/apps/altcp_proxyconnect.h",
+        "src/include/lwip/apps/fs.h",
+        "src/include/lwip/apps/http_client.h",
+        "src/include/lwip/apps/httpd_opts.h",
+        "src/include/lwip/apps/httpd.h",
+    ],
+    copts = [
+        "-Werror",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":lwip_headers",
+        "@esw//platform/device/driver/lwip:arch",
+    ],
+)
+
+cc_library(
+    name = "iperf",
+    srcs = [
+        "src/apps/lwiperf/lwiperf.c",
+    ],
+    hdrs = [
+        "src/include/lwip/apps/lwiperf.h",
+    ],
+    copts = select({
+        "@esw//toolchains:tri_core": [
+            # W549: condition is always true/false
+            # W588: dead assignment to variable eliminated
+            "--pass-c=--no-warnings=+549,+588",
+        ],
+        "//conditions:default": [
+        ],
+    }),
+    visibility = ["//visibility:public"],
+    deps = [
+        ":lwip_headers",
+        "@esw//platform/device/driver/lwip:arch",
+    ],
+)

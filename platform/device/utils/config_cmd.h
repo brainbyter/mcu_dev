@@ -1,0 +1,6 @@
+// Copyright @2022 Pony AI Inc. All rights reserved.
+
+#ifndef PLATFORM_DEVICE_UTILS_CONFIG_CMD_
+#define PLATFORM_DEVICE_UTILS_CONFIG_CMD_
+
+#endif  // PLATFORM_DEVICE_UTILS_CONFIG_CMD_

@@ -1,0 +1,34 @@
+#ifndef UDPMESSAGEOBJECTS_H
+#define UDPMESSAGEOBJECTS_H
+#include <UDP_Typedefs.h>
+
+extern UdpMessageObject_t UDP_Main_Start_MO;
+extern UdpMessageObject_t UDP_Climatic_MO;
+extern UdpMessageObject_t UDP_BCM_LGT_MO;
+extern UdpMessageObject_t UDP_BCM_VehState_MO;
+extern UdpMessageObject_t UDP_ESC_Front_Speed_MO;
+extern UdpMessageObject_t UDP_ESC_Rear_Speed_MO;
+extern UdpMessageObject_t UDP_ESC_Veh_Speed_MO;
+extern UdpMessageObject_t UDP_ESC_YR_MO;
+extern UdpMessageObject_t UDP_ESC_AX_MO;
+extern UdpMessageObject_t UDP_SAS_MO;
+extern UdpMessageObject_t UDP_MAS_Front_Sensor_MO;
+extern UdpMessageObject_t UDP_MAS_Rear_Sensor_MO;
+extern UdpMessageObject_t UDP_MAS_Side_Sensor_MO;
+extern UdpMessageObject_t UDP_SCU_MO;
+extern UdpMessageObject_t UDP_IC_ABSOLUTE_CLOCK_MO;
+extern UdpMessageObject_t UDP_IC_HUD_01_MO;
+extern UdpMessageObject_t UDP_Diag_Config_MO;
+extern UdpMessageObject_t UDP_Diag_Calibration_MO;
+extern UdpMessageObject_t UDP_FanSpeedControl_MO;
+extern UdpMessageObject_t UDP_ERAG_MO;
+extern UdpMessageObject_t UDP_TCU_R932_1_MO;
+extern UdpMessageObject_t UDP_MainDataFromPerc_MO;
+extern UdpMessageObject_t UDP_FrontPas_MO;
+extern UdpMessageObject_t UDP_RearPass_MO;
+extern UdpMessageObject_t UDP_Lane_MO;
+extern UdpMessageObject_t UDP_SignPerc_MO;
+extern UdpMessageObject_t UDP_MliaPerc_MO;
+extern UdpMessageObject_t UDP_GPU_States_MO;
+
+#endif

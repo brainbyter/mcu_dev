@@ -1,0 +1,95 @@
+// Copyright @2022 Pony AI Inc. All rights reserved.
+
+#ifndef COMMON_DRIVER_NXP_TJA1145_DEF_H_
+#define COMMON_DRIVER_NXP_TJA1145_DEF_H_
+
+typedef enum Tja1145Regs {
+  kTja1145RegModeControl = 0x1,
+  kTja1145RegMainStatus = 0x3,
+  kTja1145RegSystemEventEnable = 0x4,
+  kTja1145RegMemory0 = 0x6,
+  kTja1145RegMemory1 = 0x7,
+  kTja1145RegMemory2 = 0x8,
+  kTja1145RegMemory3 = 0x9,
+  kTja1145RegLockControl = 0xa,
+  kTja1145RegCanControl = 0x20,
+  kTja1145RegTransceiverStatus = 0x22,
+  kTja1145RegTransceiverEventEnable = 0x23,
+  kTja1145RegDataRate = 0x26,
+  kTja1145RegIdentifier0 = 0x27,
+  kTja1145RegIdentifier1 = 0x28,
+  kTja1145RegIdentifier2 = 0x29,
+  kTja1145RegIdentifier3 = 0x2a,
+  kTja1145RegMask0 = 0x2b,
+  kTja1145RegMask1 = 0x2c,
+  kTja1145RegMask2 = 0x2d,
+  kTja1145RegMask3 = 0x2e,
+  kTja1145RegFrameControl = 0x2f,
+  kTja1145RegWakePinStatus = 0x4b,
+  kTja1145RegWakePinEnable = 0x4c,
+  kTja1145RegEventCaptureStatus = 0x60,
+  kTja1145RegSystemEventStatus = 0x61,
+  kTja1145RegTransceiverEventStatus = 0x63,
+  kTja1145RegWakePinEventStatus = 0x64,
+  kTja1145RegDataMask0 = 0x68,
+  kTja1145RegDataMask1 = 0x69,
+  kTja1145RegDataMask2 = 0x6a,
+  kTja1145RegDataMask3 = 0x6b,
+  kTja1145RegDataMask4 = 0x6c,
+  kTja1145RegDataMask5 = 0x6d,
+  kTja1145RegDataMask6 = 0x6e,
+  kTja1145RegDataMask7 = 0x6f,
+  kTja1145RegIdentification = 0x7e,
+} Tja1145Regs;
+
+typedef enum Tja1145CmdType {
+  kTja1145Read = 1,
+  kTja1145Write = 0,
+} Tja1145CmdType;
+
+// This List is not the whole settings of TJA1145. Only the used settings are listed here.
+// If we need to add other settings, make sure the sequence of g_tja1145_settings and 
+// settings sequence here are same.
+typedef enum Tja1145SettingList {
+  kTja1145SettingMc = 0,
+  kTja1145SettingCfdc,
+  kTja1145SettingPncOk,
+  kTja1145SettingCpnc,
+  kTja1145SettingCdr,
+  kTja1145SettingExtendedIdentifier7to0,
+  kTja1145SettingExtendedIdentifier15to8,
+  kTja1145SettingExtendedIdentifier23to16,
+  kTja1145SettingExtendedIdentifier28to24,
+  kTja1145SettingstandardIdentifier5to0,
+  kTja1145SettingstandardIdentifier10to6,
+  kTja1145SettingExtendedMask7to0,
+  kTja1145SettingExtendedMask15to8,
+  kTja1145SettingExtendedMask23to16,
+  kTja1145SettingExtendedMask28to24,
+  kTja1145SettingstandardMask5to0,
+  kTja1145SettingstandardMask10to6,
+  kTja1145SettingIde,
+  kTja1145SettingPndm,
+  kTja1145SettingDlc,
+  kTja1145SettingDataMask0,
+  kTja1145SettingDataMask1,
+  kTja1145SettingDataMask2,
+  kTja1145SettingDataMask3,
+  kTja1145SettingDataMask4,
+  kTja1145SettingDataMask5,
+  kTja1145SettingDataMask6,
+  kTja1145SettingDataMask7,
+  kTja1145SettingCwe,
+  kTja1145SettingWpre,
+  kTja1145SettingWpfe,
+  kTja1145SettingDeviceId,
+  kTja1145SettingCw,
+  kTja1145SettingWpr,
+  kTja1145SettingWpf,
+  kTja1145SettingWpe,
+  kTja1145SettingPo,
+  kTja1145SettingGlobalEvent,
+  kTja1145SettingMax,
+} Tja1145SettingList;
+
+#endif  // COMMON_DRIVER_NXP_TJA1145_DEF_H_

@@ -1,0 +1,12 @@
+// THIS IS AUTO GENERATED! DO NOT MODIFY!
+
+// Copyright @2023 Pony AI Inc. All rights reserved.
+#ifndef PRODUCTS_TC39B_BMHD_H_
+#define PRODUCTS_TC39B_BMHD_H_
+
+#define TC39B_BMI_VALUE 0xfe
+#define TC39B_START_ADDRESS 0xa0080000
+#define TC39B_BMI_HEADER_CRC 0x3f6a04c8
+#define TC39B_BMI_HEADER_CRC_INV 0xc095fb37
+
+#endif  // PRODUCTS_TC39B_BMHD_H_

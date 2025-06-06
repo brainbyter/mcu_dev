@@ -1,0 +1,1801 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Scanner DAS
+VAL_TABLE_ MCU_SLOT_USING 1 "SLOT_B is Active" 0 "SLOT_A is Active" ;
+
+
+BO_ 2000 TestData_AA: 12 DAS
+ SG_ TD_AA_SolverTrans : 72|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_AA_WarnDms : 44|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_AA_TimeAnalWarn : 60|12@1+ (0.01,0) [0|40.95] ""  Scanner
+ SG_ TD_AA_FuzzyScore : 48|12@1+ (0.01,0) [0|40.95] ""  Scanner
+ SG_ TD_AA_EragTime : 32|12@1+ (0.01,0) [0|40.95] ""  Scanner
+ SG_ TD_AA_EragDate : 0|32@1+ (1,0) [0|4294967295] ""  Scanner
+
+BO_ 1643 AA_SwitchTest: 1 Scanner
+ SG_ TD_DfAnAaStTest : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 1642 AA_Test_Status: 1 Scanner
+ SG_ AA_Status : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1727 TestData_ALCC: 1 DAS
+ SG_ TD_ALCC_EnaSts : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 1712 ERAG_Data: 16 DAS
+ SG_ Erag_Speed : 112|16@1+ (0.01,0) [0|655.35] ""  Scanner
+ SG_ Erag_Course : 96|14@1+ (0.1,0) [0|1638.3] ""  Scanner
+ SG_ Erag_Year : 0|12@1+ (1,0) [0|4095] ""  Scanner
+ SG_ Erag_Seconds : 32|6@1+ (1,0) [0|63] ""  Scanner
+ SG_ Erag_Month : 12|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ Erag_Minutes : 26|6@1+ (1,0) [0|63] ""  Scanner
+ SG_ Erag_Long : 40|26@1+ (1E-005,-180) [-180|491.08863] ""  Scanner
+ SG_ Erag_Lat : 66|25@1+ (1E-005,-90) [-90|245.54431] ""  Scanner
+ SG_ Erag_Hours : 21|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ Erag_Day : 16|5@1+ (1,0) [0|31] ""  Scanner
+
+BO_ 113 TestJerkBrake: 2 Scanner
+ SG_ TestJerk_AfsBrakeJerkLvl : 8|8@1+ (1,0) [0|255] ""  DAS
+ SG_ TestJerk_AfsBrakeJerkEnab_Stat : 0|1@1+ (1,0) [0|1] ""  DAS
+ SG_ TestJerk_AfsBrakeJerk_Req : 1|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2005 MliaPercData12_19: 64 DAS
+ SG_ MP_Obj19_Vel : 436|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj19_Sz : 449|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj19_Sy2 : 427|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj19_Sy1 : 409|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj19_Sx2 : 418|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj19_Sx1 : 400|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj19_Precision : 445|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj19_LightSts : 447|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj19_Detect : 399|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj18_Vel : 379|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj18_Sz : 392|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj18_Sy2 : 370|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj18_Sy1 : 352|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj18_Sx2 : 361|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj18_Sx1 : 343|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj18_Precision : 388|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj18_LightSts : 390|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj18_Detect : 342|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj17_Vel : 322|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj17_Sz : 335|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj17_Sy2 : 313|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj17_Sy1 : 295|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj17_Sx2 : 304|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj17_Sx1 : 286|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj17_Precision : 331|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj17_LightSts : 333|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj17_Detect : 285|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj16_Vel : 265|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj16_Sz : 278|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj16_Sy2 : 256|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj16_Sy1 : 238|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj16_Sx2 : 247|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj16_Sx1 : 229|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj16_Precision : 274|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj16_LightSts : 276|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj16_Detect : 228|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj15_Vel : 208|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj15_Sz : 221|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj15_Sy2 : 199|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj15_Sy1 : 181|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj15_Sx2 : 190|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj15_Sx1 : 172|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj15_Precision : 217|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj15_LightSts : 219|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj15_Detect : 171|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj14_Vel : 151|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj14_Sz : 164|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj14_Sy2 : 142|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj14_Sy1 : 124|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj14_Sx2 : 133|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj14_Sx1 : 115|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj14_Precision : 160|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj14_LightSts : 162|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj14_Detect : 114|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj13_Vel : 94|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj13_Sz : 107|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj13_Sy2 : 85|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj13_Sy1 : 67|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj13_Sx2 : 76|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj13_Sx1 : 58|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj13_Precision : 103|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj13_LightSts : 105|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj13_Detect : 57|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj12_Vel : 37|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj12_Sz : 50|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj12_Sy2 : 28|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj12_Sy1 : 10|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj12_Sx2 : 19|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj12_Sx1 : 1|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj12_Precision : 46|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj12_LightSts : 48|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj12_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 262 ADASCANFD_Timeouts: 8 DAS
+ SG_ VCU_DriverDmd_TO : 57|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ VCU_ADAS_01_TO : 56|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TM_Stat_TO : 55|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TCU_R932_1_TO : 54|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SWM_ContrlsState_TO : 53|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SWM_ContrlsState_Old_TO : 52|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SCU_02_TO : 51|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SAS_Standard_TO : 50|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ RSA_Status_TO : 49|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ mLEDR_STATE_TO : 48|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ mLEDL_STATE_TO : 47|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MAS_Status_TO : 46|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MAS_SideUSS_TO : 45|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MAS_RearUSS_TO : 44|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MAS_FrontUSS_TO : 43|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ IC_DMS_TO : 42|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ IC_ADAS_REST_TO : 41|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ IC_ABSOLUTE_CLOCK_TO : 40|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ HLR_STATE_TO : 39|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ HLL_STATE_TO : 38|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_YRS_02_TO : 37|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_YRS_01_TO : 36|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_10_TO : 35|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_09_TO : 34|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_07_TO : 33|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_06_TO : 32|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_04_TO : 31|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_03_TO : 30|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ESC_02_TO : 29|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA6_TO : 28|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA5_TO : 27|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA4_TO : 26|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA3_TO : 25|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA2_TO : 24|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_NMEA1_TO : 23|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ERAG_DATA_MSG_TO : 22|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EPB_Status_TO : 21|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_4_TO : 20|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_3_TO : 19|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_16_TO : 18|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_14_TO : 17|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_04_TO : 16|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ EMS_03_TO : 15|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ DMRR_Msg1_TO : 14|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ DMRL_Msg1_TO : 13|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ DMFR_Msg1_TO : 12|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ DMFL_Msg1_TO : 11|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ CCU_Stat1_TO : 10|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_VEH_STATE_TO : 9|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_Veh_State2_TO : 8|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_RLS_Stat_TO : 7|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_Lock_CTR_TO : 6|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_IC_Info_Msg_TO : 5|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_EXT_LGT_TO : 4|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_DMS_01_TO : 3|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ BCM_CLIMATIC_DATA_TO : 2|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ATC_TX_TO : 1|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ ACU_01_TO : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2009 RearPercData17_18: 24 DAS
+ SG_ RP_Obj18_Vy : 177|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj18_Vx : 164|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj18_Sy2 : 149|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj18_Sy1 : 134|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj18_Sx2 : 119|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj18_Sx1 : 104|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj18_Probabil : 97|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj18_Detect : 96|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ RP_Obj17_Vy : 81|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj17_Vx : 68|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj17_Sy2 : 53|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj17_Sy1 : 38|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj17_Sx2 : 23|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj17_Sx1 : 8|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj17_Probabil : 1|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj17_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2008 RearPercData15_16: 24 DAS
+ SG_ RP_Obj16_Vy : 177|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj16_Vx : 164|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj16_Sy2 : 149|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj16_Sy1 : 134|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj16_Sx2 : 119|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj16_Sx1 : 104|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj16_Probabil : 97|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj16_Detect : 96|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ RP_Obj15_Vy : 81|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj15_Vx : 68|13@1+ (0.01,-30) [-30|51.91] "m/s"  Scanner
+ SG_ RP_Obj15_Sy2 : 53|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj15_Sy1 : 38|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj15_Sx2 : 23|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj15_Sx1 : 8|15@1+ (0.01,-204) [-204|123.67] "m"  Scanner
+ SG_ RP_Obj15_Probabil : 1|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj15_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2007 RearPercData12_14: 48 DAS
+ SG_ RP_Obj14_Vy : 273|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj14_Vx : 260|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj14_Sy2 : 245|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj14_Sy1 : 230|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj14_Sx2 : 215|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj14_Sx1 : 200|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj14_Probabil : 193|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj14_Detect : 192|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ RP_Obj13_Vy : 177|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj13_Vx : 164|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj13_Sy2 : 149|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj13_Sy1 : 134|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj13_Sx2 : 119|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj13_Sx1 : 104|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj13_Probabil : 97|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj13_Detect : 96|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ RP_Obj12_Vy : 81|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj12_Vx : 68|13@1+ (0.01,-30) [-30|51.91] ""  Scanner
+ SG_ RP_Obj12_Sy2 : 53|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj12_Sy1 : 38|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj12_Sx2 : 23|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj12_Sx1 : 8|15@1+ (0.01,-204) [-204|123.67] ""  Scanner
+ SG_ RP_Obj12_Probabil : 1|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ RP_Obj12_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2 EmergOrinResetRequest: 1 Scanner
+ SG_ OrinResetReq : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 105 PrepareToFirmware: 1 Scanner
+ SG_ fPrepareToFW : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 104 Emu_AfsExecuteReq: 1 Scanner
+ SG_ Emu_DAS_AfsExecute_Req : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2028 LaneRearPercData: 48 DAS
+ SG_ LP_RLS_Sx5 : 0|15@1+ (0.01,-10) [-10|317.67] "m"  Scanner
+ SG_ LP_RLS_Sx10 : 15|15@1+ (0.01,-20) [-20|307.67] "m"  Scanner
+ SG_ LP_RLS_Sx20 : 30|15@1+ (0.01,-40) [-40|287.67] "m"  Scanner
+ SG_ LP_RLS_Sx30 : 45|15@1+ (0.01,-60) [-60|267.67] "m"  Scanner
+ SG_ LP_RLS_Sx40 : 60|15@1+ (0.01,-80) [-80|247.67] "m"  Scanner
+ SG_ LP_RLS_Sx50 : 75|15@1+ (0.01,-100) [-100|227.67] "m"  Scanner
+ SG_ LP_RLS_Sx60 : 90|16@1+ (0.01,-120) [-120|535.35] "m"  Scanner
+ SG_ LP_RLS_Sx70 : 106|16@1+ (0.01,-140) [-140|515.35] "m"  Scanner
+ SG_ LP_RLS_Sx80 : 122|16@1+ (0.01,-160) [-160|495.35] "m"  Scanner
+ SG_ LP_RLS_Sx90 : 138|16@1+ (0.01,-180) [-180|475.35] "m"  Scanner
+ SG_ LP_RLS_Sx100 : 154|16@1+ (0.01,-200) [-200|455.35] "m"  Scanner
+ SG_ LP_RRS_Sx5 : 176|15@1+ (0.01,-10) [-10|317.67] "m"  Scanner
+ SG_ LP_RRS_Sx10 : 191|15@1+ (0.01,-20) [-20|307.67] "m"  Scanner
+ SG_ LP_RRS_Sx20 : 206|15@1+ (0.01,-40) [-40|287.67] "m"  Scanner
+ SG_ LP_RRS_Sx30 : 221|15@1+ (0.01,-60) [-60|267.67] "m"  Scanner
+ SG_ LP_RRS_Sx40 : 236|15@1+ (0.01,-80) [-80|247.67] "m"  Scanner
+ SG_ LP_RRS_Sx50 : 251|15@1+ (0.01,-100) [-100|227.67] "m"  Scanner
+ SG_ LP_RRS_Sx60 : 266|16@1+ (0.01,-120) [-120|535.35] "m"  Scanner
+ SG_ LP_RRS_Sx70 : 282|16@1+ (0.01,-140) [-140|515.35] "m"  Scanner
+ SG_ LP_RRS_Sx80 : 298|16@1+ (0.01,-160) [-160|495.35] "m"  Scanner
+ SG_ LP_RRS_Sx90 : 314|16@1+ (0.01,-180) [-180|475.35] "m"  Scanner
+ SG_ LP_RRS_Sx100 : 330|16@1+ (0.01,-200) [-200|455.35] "m"  Scanner
+
+BO_ 2031 Emu_Blink_Xcp: 1 Scanner
+ SG_ Emu_BlinkPeriodCheckMode : 0|1@1+ (1,0) [0|1] ""  DAS
+ SG_ Emu_BlinkPeriod : 1|5@1+ (0.1,0) [0|3.1] ""  DAS
+
+BO_ 2006 MliaPercData20_21: 16 DAS
+ SG_ MP_Obj21_Vel : 101|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj21_Sz : 120|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj21_LightSts : 112|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj21_Precision : 110|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj21_Sy2 : 92|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj21_Sx2 : 83|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj21_Sy1 : 74|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj21_Sx1 : 65|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj21_Detect : 64|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj20_Vel : 37|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj20_Sz : 56|7@1+ (1,-50) [-50|50] "m"  Scanner
+ SG_ MP_Obj20_LightSts : 48|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj20_Precision : 46|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj20_Sy2 : 28|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj20_Sx2 : 19|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj20_Sy1 : 10|9@1+ (1,-250) [-250|250] "m"  Scanner
+ SG_ MP_Obj20_Sx1 : 1|9@1+ (1,0) [0|500] "m"  Scanner
+ SG_ MP_Obj20_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2004 MliaPercData06_11: 64 DAS
+ SG_ MP_Obj11_Vel : 453|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj11_Sz : 466|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj11_Sy2 : 440|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj11_Sy1 : 414|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj11_Sx2 : 427|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj11_Sx1 : 401|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj11_Precision : 462|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj11_LightSts : 464|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj11_Detect : 400|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj10_Vel : 373|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj10_Sz : 386|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj10_Sy2 : 360|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj10_Sy1 : 334|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj10_Sx2 : 347|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj10_Sx1 : 321|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj10_Precision : 382|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj10_LightSts : 384|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj10_Detect : 320|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj9_Vel : 293|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj9_Sz : 306|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj9_Sy2 : 280|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj9_Sy1 : 254|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj9_Sx2 : 267|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj9_Sx1 : 241|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj9_Precision : 302|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj9_LightSts : 304|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj9_Detect : 240|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj8_Vel : 213|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj8_Sz : 226|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj8_Sy2 : 200|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj8_Sy1 : 174|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj8_Sx2 : 187|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj8_Sx1 : 161|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj8_Precision : 222|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj8_LightSts : 224|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj8_Detect : 160|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj7_Vel : 133|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj7_Sz : 146|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj7_Sy2 : 120|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj7_Sy1 : 94|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj7_Sx2 : 107|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj7_Sx1 : 81|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj7_Precision : 142|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj7_LightSts : 144|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj7_Detect : 80|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj6_Vel : 53|9@1+ (0.1,0) [0|51.1] "m/s"  Scanner
+ SG_ MP_Obj6_Sz : 66|10@1+ (0.1,-50) [-50|52.3] "m"  Scanner
+ SG_ MP_Obj6_Sy2 : 40|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj6_Sy1 : 14|13@1+ (0.1,-250) [-250|569.1] "m"  Scanner
+ SG_ MP_Obj6_Sx2 : 27|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj6_Sx1 : 1|13@1+ (0.1,0) [0|819.1] "m"  Scanner
+ SG_ MP_Obj6_Precision : 62|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj6_LightSts : 64|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj6_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 519 UDP_Packet7: 1 Vector__XXX
+ SG_ UDP_Packet7_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 518 UDP_Packet6: 1 Vector__XXX
+ SG_ UDP_Packet6_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 517 UDP_Packet5: 1 Vector__XXX
+ SG_ UDP_Packet5_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 516 UDP_Packet4: 1 Vector__XXX
+ SG_ UDP_Packet4_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 515 UDP_Packet3: 1 Vector__XXX
+ SG_ UDP_Packet3_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 514 UDP_Packet2: 1 Vector__XXX
+ SG_ UDP_Packet2_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 513 UDP_Packet1: 1 Vector__XXX
+ SG_ UDP_Packet1_Tick : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 261 UdpPacketsStat: 1 DAS
+ SG_ UDP_SignPerc_Timeout : 6|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_RearPass_Timeout : 5|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_MliaPerc_Timeout : 4|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_MainDataFromPerc_Timeout : 3|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_Lane_Timeout : 2|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_GPU_States_Timeout : 1|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ UDP_FrontPas_Timeout : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 103 TestData_SOS_Status: 1 DAS
+ SG_ ERAG_Await_Status : 0|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 102 TestData_SOS_Button: 1 Scanner
+ SG_ TD_SOS_Hardcore_CANCEL : 1|1@1+ (1,0) [0|1] ""  DAS
+ SG_ TD_SOS_Req : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2029 Emu_MLIA_Xcp: 12 Scanner
+ SG_ Emu_MLIA_OnlyRadarObj_avail : 64|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_NarrCoef : 60|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_HysterCoef : 56|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_Filter_delay_ON : 24|8@1+ (0.1,0) [0|25.5] ""  DAS
+ SG_ Emu_MLIA_Filter_delay_OFF : 16|8@1+ (0.1,0) [0|25.5] ""  DAS
+ SG_ Emu_MLIA_mLED_avail : 52|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_HLR_avail : 48|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_HLL_avail : 44|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_ADB_avail : 40|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_Y_ext_500 : 32|8@1+ (0.1,0) [0|25.5] ""  DAS
+ SG_ Emu_MLIA_Y_ext_25 : 8|8@1+ (0.1,0) [0|25.5] ""  DAS
+ SG_ Emu_MLIA_Filter_avail : 1|4@1+ (0.1,0) [0|1.5] ""  DAS
+ SG_ Emu_MLIA_DfDiagMliaHba : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 1 VersionInfo: 7 DAS
+ SG_ VerYear : 9|12@1+ (1,0) [0|4095] ""  Scanner
+ SG_ VerSystemTime : 24|32@1+ (1,0) [0|4294967295] ""  Scanner
+ SG_ VerMonth : 5|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ VerDay : 0|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ VerActiveSlot : 21|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2019 FrontPercData4_6: 48 DAS
+ SG_ FP_Obj6_Vy : 231|8@1+ (0.1,-12) [-12|12] "m/s*s"  Scanner
+ SG_ FP_Obj6_Vx : 221|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj6_Type : 239|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj6_Sy2 : 210|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj6_Sy1 : 188|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj6_Sx2 : 199|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj6_Sx1 : 177|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj6_Probabil : 255|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj6_Orient : 242|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj6_DynID : 251|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj6_Detect : 176|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj5_Vy : 143|8@1+ (0.1,-12) [-12|12] "m/s*s"  Scanner
+ SG_ FP_Obj5_Vx : 133|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj5_Type : 151|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj5_Sy2 : 122|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj5_Sy1 : 100|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj5_Sx2 : 111|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj5_Sx1 : 89|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj5_Probabil : 167|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj5_Orient : 154|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj5_DynID : 163|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj5_Detect : 88|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj4_Vy : 55|8@1+ (0.1,-12) [-12|12] "m/s*s"  Scanner
+ SG_ FP_Obj4_Vx : 45|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj4_Type : 63|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj4_Sy2 : 34|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj4_Sy1 : 12|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj4_Sx2 : 23|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj4_Sx1 : 1|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj4_Probabil : 79|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj4_Orient : 66|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj4_DynID : 75|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj4_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 1774 TestData_FromMRRs: 3 DAS
+ SG_ TD_ADAS_RCW_W : 20|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_RCTB_R_W : 18|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_RCTB_L_W : 16|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_RCTA_R_W : 14|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_RCTA_L_W : 12|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_LCA_R_W : 10|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_LCA_L_W : 8|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_DOW_R_W : 6|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_DOW_L_W : 4|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_BSD_R_W : 2|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_ADAS_BSD_L_W : 0|2@1+ (1,0) [0|3] ""  Scanner
+
+BO_ 2030 TestData_ToMRRs: 8 DAS
+ SG_ TD_Veh1_YawRate_IN : 16|16@1+ (0.00024,-2.093) [-2.093|2.093] ""  Scanner
+ SG_ TD_Veh1_YawRat_V : 12|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh1_VehSpeed_V : 11|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh1_VehSpeed_IN : 48|13@1+ (0.05625,0) [0|299.981] ""  Scanner
+ SG_ TD_Veh1_Str_Angle_V : 10|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh1_Str_Angle : 32|16@1+ (0.1,-900) [-900|900] ""  Scanner
+ SG_ TD_Veh2_IGN_State_V : 9|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh2_IGN_State : 8|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh2_GEAR_STATE_NOW : 13|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ TD_Veh2_GEAR_STA_NOW_V : 7|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_RRDoorSts : 4|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_RLDoorSts : 3|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_RightTurnSWSts : 2|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_PassengerDoorSts : 1|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_LockSts : 0|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_LeftTurnSWSts : 6|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_Veh3_DriverDoorSts : 5|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2027 Emu_EMS: 3 Scanner
+ SG_ Emu_DAS_CcMotInc_Stat : 8|16@1+ (1,-30000) [-30000|30000] ""  DAS
+ SG_ Emu_DAS_CcMotIncFlag_Switch : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2026 DiagToolFake: 4 Scanner
+ SG_ DTF_McuRRR_AngVal : 20|12@1+ (0.01,-20.47) [-20.47|20.48] ""  DAS
+ SG_ DTF_McuRRL_AngVal : 8|12@1+ (0.01,-20.47) [-20.47|20.48] ""  DAS
+ SG_ DTF_McuRRErrorSts : 7|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuRRCalibSts : 6|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuTicuInstalSts : 5|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuRrInstalSts : 4|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuLidarInstalSts : 3|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuFrcuInstalSts : 2|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuFcuInstalSts : 1|1@1+ (1,0) [0|1] ""  DAS
+ SG_ DTF_McuDiagSession : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2025 TestData_GPU_States: 20 DAS
+ SG_ TD_GpuLidVirtYaw : 148|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuLidStaticYaw : 136|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuLidStaticPitch : 122|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuLidCalibSts : 118|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_GpuLidarErrorSts : 115|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ TD_GpuTicuVirtYaw : 103|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuTicuStaticYaw : 91|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuTicuStaticPitch : 56|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuTicuErrorSts : 83|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_GpuTicuCalibSts : 80|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ TD_GpuTemp : 0|12@1+ (0.1,0) [0|409.5] ""  Scanner
+ SG_ TD_GpuFrcuVirtYaw : 44|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuFrcuProb : 87|4@1+ (0.1,0) [0|1.5] ""  Scanner
+ SG_ TD_GpuFrcuErrorSts : 85|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_GpuFcuWErrorSts : 30|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_GpuFcuVirtYaw : 16|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuFcuStaticAngYaw : 32|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuFcuStaticAngPitch : 68|12@1+ (0.01,-20.47) [-20.47|20.48] ""  Scanner
+ SG_ TD_GpuFcuNErrorSts : 28|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_GpuFcuCalibSts : 12|4@1+ (1,0) [0|15] ""  Scanner
+
+BO_ 1732 TestData_DOW: 4 DAS
+ SG_ TD_DOW_WarnReqTransRight : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_DOW_WarnReqTransLeft : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_DOW_IsObjInRightZone : 25|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_DOW_IsObjInLeftZone : 24|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_DOW_LogicTrans : 0|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 2024 Emu_Spd: 2 Scanner
+ SG_ Emu_BCM_Switch : 5|1@1+ (1,0) [0|0] ""  DAS
+ SG_ Emu_Vehicle_Spd_Val : 8|8@1+ (1,0) [0|0] ""  DAS
+ SG_ Emu_Mlia_Start_Req : 4|1@1+ (1,0) [0|0] ""  DAS
+ SG_ Emu_IC_Visual_Req : 3|1@1+ (1,0) [0|0] ""  DAS
+ SG_ Emu_HighBeam_Req : 1|2@1+ (1,0) [0|0] ""  DAS
+ SG_ Emu_Spd_Switch : 0|1@1+ (1,0) [0|0] ""  DAS
+
+BO_ 2023 NeuralNetwork_Switch: 1 Scanner
+ SG_ TD_PercStartSign : 3|1@1+ (1,0) [0|0] ""  Scanner,DAS
+ SG_ TD_PercStartRearObj : 5|1@1+ (1,0) [0|0] ""  Scanner,DAS
+ SG_ TD_PercStartMlia : 0|1@1+ (1,0) [0|0] ""  Scanner,DAS
+ SG_ TD_PercStartLane : 4|1@1+ (1,0) [0|0] ""  Scanner,DAS
+ SG_ TD_PercStartFrontPasObj : 1|1@1+ (1,0) [0|0] ""  Scanner,DAS
+ SG_ TD_PercStartFrontOncomObj : 2|1@1+ (1,0) [0|0] ""  Scanner,DAS
+
+BO_ 801 DiagPanelConn: 1 Scanner
+ SG_ DiagPanelEn : 0|1@1+ (1,0) [0|0] ""  DAS
+
+BO_ 1766 DiagGpuResp: 16 DAS
+ SG_ RES_GPU_TicuStaticAngYaw : 81|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_TicuStaticAngPitch : 87|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_TicuVirtYaw : 75|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_TicuErrorSts : 16|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_TicuCalibSts : 72|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_Temp : 0|7@1+ (1,-20) [-20|107] ""  Scanner
+ SG_ RES_GPU_LidStaticAngYaw : 115|7@1+ (0.1,-6.1) [-6.1|6.6] ""  Scanner
+ SG_ RES_GPU_LidStaticAngPitch : 122|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_LidVirtYaw : 108|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_LidErrorSts : 19|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_LidCalibSts : 104|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_FrcuVirtYaw : 24|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_FrcuProb : 30|7@1+ (0.01,0) [0|1.27] ""  Scanner
+ SG_ RES_GPU_FrcuErrorSts : 8|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ RES_GPU_FcuWErrorSts : 10|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_FcuStaticAngYaw : 48|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_FcuStaticAngPitch : 54|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_FcuNVirtYaw : 60|6@1+ (0.1,-3.1) [-3.1|3.2] ""  Scanner
+ SG_ RES_GPU_FcuNErrorSts : 13|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ RES_GPU_FcuCalibSts : 40|3@1+ (1,0) [0|7] ""  Scanner
+
+BO_ 1765 DiagGpuReq: 6 Scanner
+ SG_ REQ_GPU_TicuGetImg : 28|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_TicuCalibStop : 27|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_TicuCalibStart : 25|2@1+ (1,0) [0|3] ""  DAS
+ SG_ REQ_GPU_LidGetImg : 43|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_LidCalibStop : 42|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_LidCalibStart : 40|2@1+ (1,0) [0|3] ""  DAS
+ SG_ REQ_GPU_FrcuVirtAngReset : 32|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FrcuGetImg : 33|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FcuVirtAngReset : 10|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FcuSetYawAngle : 13|6@1+ (0.1,-3.1) [-3.1|3.2] "deg"  DAS
+ SG_ REQ_GPU_FcuSetPitchAngle : 19|6@1+ (0.1,-3.1) [-3.1|3.2] "deg"  DAS
+ SG_ REQ_GPU_FcuGetWideImg : 12|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FcuGetNarrowImg : 11|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FcuCalibStop : 9|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_GPU_FcuCalibStart : 7|2@1+ (1,0) [0|3] ""  DAS
+ SG_ REQ_GPU_FanSpeedReq : 0|7@1+ (1,0) [0|127] ""  DAS
+
+BO_ 1763 DiagMrrRResp: 20 DAS
+ SG_ TD_MRR_AlignCompFlg_RR : 152|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MRR_VerticalAlignAngle_RR : 16|16@1+ (0.01,-180) [-180|475.35] ""  Scanner
+ SG_ TD_MRR_Temp_RR : 66|8@1+ (1,-40) [-40|215] ""  Scanner
+ SG_ TD_MRR_SuppVolt5_RR : 46|10@1+ (0.01,0) [0|10.23] ""  Scanner
+ SG_ TD_MRR_SuppVolt1_5_RR : 56|10@1+ (0.01,0) [0|10.23] ""  Scanner
+ SG_ TD_MRR_SuppVolt12_RR : 36|10@1+ (0.1,0) [0|102.3] ""  Scanner
+ SG_ TD_MRR_ResCalibration_RR : 32|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_MRR_RelativeDistRR_RR : 128|8@1+ (0.01,0) [0|2.55] ""  Scanner
+ SG_ TD_MRR_RelativeDistFR_RR : 112|8@1+ (0.01,0) [0|2.55] ""  Scanner
+ SG_ TD_MRR_HorizontalAlignAngle_RR : 0|16@1+ (0.01,-180) [-180|475.35] ""  Scanner
+ SG_ TD_MRR_HeightInstallRadar_RR : 74|8@1+ (0.01,0) [0|2.55] ""  Scanner
+ SG_ TD_MRR_DistRrToRearAxle_RR : 120|8@1+ (0.01,0) [0|2.55] ""  Scanner
+ SG_ TD_MRR_DistMirrorToRR_RR : 144|8@1+ (0.01,0) [0|2.55] ""  Scanner
+ SG_ TD_MRR_DistFrToRearAxle_RR : 101|10@1+ (0.01,0) [0|10.23] ""  Scanner
+ SG_ TD_MRR_CarWidth_RR : 92|9@1+ (0.01,0) [0|5.11] ""  Scanner
+ SG_ TD_MRR_CarBase_RR : 82|10@1+ (0.01,0) [0|10.23] ""  Scanner
+ SG_ TD_MRR_BetweenDistFR_RR_RR : 136|8@1+ (0.01,0) [0|2.55] ""  Scanner
+
+BO_ 1761 DiagMrrDidReq: 3 Scanner
+ SG_ REQ_MRR_DID_VehParams_WR_RR : 17|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_VehParams_WR_RL : 16|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_RadarInsParams_WR_RR : 19|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_RadarInsParams_WR_RL : 18|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_Volt5_RR : 14|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_Volt1_5_RR : 13|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_Volt12_RR : 15|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_VehParams_RR : 11|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_Temp_RR : 12|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_RadarInsParams_RR : 10|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_Alignresult_RR : 8|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_AlignCompFlg_RR : 9|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_Volt5_RL : 6|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_Volt1_5_RL : 5|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_DID_Volt12_RL : 7|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_VehParams_RL : 3|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_Temp_RL : 4|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_RadarInsParams_RL : 2|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_Alignresult_RL : 0|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_DID_AlignCompFlg_RL : 1|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 1762 DiagMrrLResp: 20 DAS
+ SG_ TD_MRR_AlignCompFlg_RL : 152|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MRR_DistRrToRearAxle_RL : 120|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_VerticalAlignAngle_RL : 16|16@1+ (0.01,-180) [-180|475.35] "degree"  Scanner
+ SG_ TD_MRR_Temp_RL : 66|8@1+ (1,-40) [-40|215] "C"  Scanner
+ SG_ TD_MRR_SuppVolt5_RL : 46|10@1+ (0.01,0) [0|10.23] "V"  Scanner
+ SG_ TD_MRR_SuppVolt1_5_RL : 56|10@1+ (0.01,0) [0|10.23] "V"  Scanner
+ SG_ TD_MRR_SuppVolt12_RL : 36|10@1+ (0.1,0) [0|102.3] "V"  Scanner
+ SG_ TD_MRR_ResCalibration_RL : 32|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_MRR_BetweenDistFR_RR_RL : 136|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_RelativeDistRR_RL : 128|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_RelativeDistFR_RL : 112|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_HorizontalAlignAngle_RL : 0|16@1+ (0.01,-180) [-180|475.35] "degree"  Scanner
+ SG_ TD_MRR_HeightInstallRadar_RL : 74|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_DistMirrorToRR_RL : 144|8@1+ (0.01,0) [0|2.55] "m"  Scanner
+ SG_ TD_MRR_DistFrToRearAxle_RL : 101|10@1+ (0.01,0) [0|10.23] "m"  Scanner
+ SG_ TD_MRR_CarWidth_RL : 92|9@1+ (0.01,0) [0|5.11] "m"  Scanner
+ SG_ TD_MRR_CarBase_RL : 82|10@1+ (0.01,0) [0|10.23] "m"  Scanner
+
+BO_ 1760 DiagMrrCalibrationReq: 12 Scanner
+ SG_ REQ_MRR_TgtOffsetAngle_Val : 85|10@1+ (0.01,0) [0|10.23] ""  DAS
+ SG_ REQ_MRR_TgtDistance_Val : 75|10@1+ (0.01,0) [0|10.23] ""  DAS
+ SG_ REQ_MRR_StartCalibration_RR : 1|1@1+ (1,0) [0|1] ""  DAS
+ SG_ REQ_MRR_StartCalibration_RL : 0|1@1+ (1,0) [0|0] ""  DAS
+ SG_ REQ_MRR_RelativeDistToFR_RR_Val : 67|8@1+ (0.01,0) [0|2.55] "m"  DAS
+ SG_ REQ_MRR_RelativeDistRR_Val : 59|8@1+ (0.01,0) [0|2.55] "m"  DAS
+ SG_ REQ_MRR_RelativeDistFR_Val : 51|8@1+ (0.01,0) [0|2.55] "m"  DAS
+ SG_ REQ_MRR_HeightInstallRadar_Val : 43|8@1+ (0.01,0) [0|2.55] "m"  DAS
+ SG_ REQ_MRR_DistRrToRearAxle_Val : 35|8@1+ (0.01,0) [0|2.55] "m"  DAS
+ SG_ REQ_MRR_DistMirrorToRR_Val : 18|10@1+ (0.01,0) [0|10.23] "m"  DAS
+ SG_ REQ_MRR_DistFrToRearAxle_Val : 8|10@1+ (0.01,0) [0|10.23] "m"  DAS
+ SG_ REQ_MRR_CarWidth_Val : 2|5@1+ (0.1,0) [0|3.1] "m"  DAS
+ SG_ REQ_MRR_CarBase_Val : 28|7@1+ (0.1,0) [0|12.7] "m"  DAS
+
+BO_ 2022 OncomeCrossPercData: 64 DAS
+ SG_ FP_Obj11_Orient : 420|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj11_DynID : 429|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj11_Sy2 : 406|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj11_Sx2 : 395|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj10_Orient : 332|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj10_DynID : 341|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj10_Sy2 : 318|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj10_Sx2 : 307|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj9_Orient : 244|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj9_DynID : 253|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj9_Sy2 : 230|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj9_Sx2 : 219|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj8_Orient : 155|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj8_DynID : 164|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj8_Sy2 : 141|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj8_Sx2 : 130|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj7_DynID : 76|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj7_Orient : 67|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj7_Sy2 : 53|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj7_Sx2 : 42|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj9_Vy : 210|9@1+ (0.1,-20) [-20|20] "m/s*s"  Scanner
+ SG_ FP_Obj9_Vx : 199|11@1+ (0.1,-102) [-102|102.7] "m/s*s"  Scanner
+ SG_ FP_Obj9_Type : 241|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj9_Sy1 : 188|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj9_Sx1 : 177|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj9_Probabil : 257|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj9_Detect : 176|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj8_Vy : 121|9@1+ (0.1,-20) [-20|20] "m/s*s"  Scanner
+ SG_ FP_Obj8_Vx : 111|9@1+ (0.1,-15) [-15|15] "m/s*s"  Scanner
+ SG_ FP_Obj8_Type : 152|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj8_Sy1 : 100|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj8_Sx1 : 89|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj8_Probabil : 168|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj8_Detect : 88|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj7_Vy : 33|9@1+ (0.1,-20) [-20|20] "m/s*s"  Scanner
+ SG_ FP_Obj7_Vx : 23|10@1+ (0.1,-92) [-92|10.3] "m/s*s"  Scanner
+ SG_ FP_Obj7_Type : 64|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj7_Sy1 : 12|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj7_Sx1 : 1|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj7_Probabil : 80|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj7_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj11_Vy : 386|9@1+ (0.1,-20) [-20|20] "m/s*s"  Scanner
+ SG_ FP_Obj11_Vx : 375|11@1+ (0.1,-102) [-102|102.7] "m/s*s"  Scanner
+ SG_ FP_Obj11_Type : 417|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj11_Sy1 : 364|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj11_Sx1 : 353|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj11_Probabil : 433|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj11_Detect : 352|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj10_Vy : 298|9@1+ (0.1,-20) [-20|20] "m/s*s"  Scanner
+ SG_ FP_Obj10_Vx : 287|11@1+ (0.1,-102) [-102|102.7] "m/s*s"  Scanner
+ SG_ FP_Obj10_Type : 329|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj10_Sy1 : 276|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj10_Sx1 : 265|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj10_Probabil : 345|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj10_Detect : 264|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 1716 MainStart: 4 Scanner
+ SG_ M_AaStart : 25|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_UdpPackets_St : 24|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_Sos_Status : 23|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_Erag_Data : 22|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_Adascanfd_to : 21|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_AlccStart : 20|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_MRR_InOutDataStart : 19|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_GpuStates_Start : 18|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_DowStart : 17|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_OncomCrossPerc_Start : 16|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_VisualStart : 15|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_SignPerc_Start : 14|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_RearPerc_Start : 13|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_RdaStart : 12|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_RcwStart : 11|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_MliaStart : 10|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_MliaPerc_Start : 9|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_MainData_Start : 8|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_LkaStart : 7|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_LdwStart : 6|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_LccStart : 5|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_LanePerc_Start : 4|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_FrontPerc_Start : 3|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_FiuStart : 2|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_AebStart : 1|1@1+ (1,0) [0|1] ""  DAS
+ SG_ M_AccStart : 0|1@1+ (1,0) [0|1] ""  DAS
+
+BO_ 2003 MliaPercData01_05: 64 DAS
+ SG_ MP_Obj5_Vel : 457|13@1+ (0.1,0) [0|819.1] "m/s"  Scanner
+ SG_ MP_Obj5_Sz : 474|14@1+ (1,-50) [-50|16333] "m"  Scanner
+ SG_ MP_Obj5_Sy2 : 441|16@1+ (1,-250) [-250|65285] "m"  Scanner
+ SG_ MP_Obj5_Sy1 : 409|16@1+ (1,-250) [-250|65285] "m"  Scanner
+ SG_ MP_Obj5_Sx2 : 425|16@1+ (1,0) [0|65535] "m"  Scanner
+ SG_ MP_Obj5_Sx1 : 393|16@1+ (1,0) [0|65535] "m"  Scanner
+ SG_ MP_Obj5_Precision : 470|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj5_LightSts : 472|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj5_Detect : 392|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj4_Vel : 361|13@1+ (0.1,0) [0|819.1] "m/s"  Scanner
+ SG_ MP_Obj4_Sz : 378|14@1+ (1,-50) [-50|16333] "m"  Scanner
+ SG_ MP_Obj4_Sy2 : 345|16@1+ (1,-250) [-250|65285] "m"  Scanner
+ SG_ MP_Obj4_Sy1 : 313|16@1+ (1,-250) [-250|65285] "m"  Scanner
+ SG_ MP_Obj4_Sx2 : 329|16@1+ (1,0) [0|65535] "m"  Scanner
+ SG_ MP_Obj4_Sx1 : 297|16@1+ (1,0) [0|65535] "m"  Scanner
+ SG_ MP_Obj4_Precision : 374|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj4_LightSts : 376|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj4_Detect : 296|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj3_Vel : 265|13@1+ (0.01,0) [0|81.91] "m/s"  Scanner
+ SG_ MP_Obj3_Sz : 282|14@1+ (0.01,-50) [-50|113.83] "m"  Scanner
+ SG_ MP_Obj3_Sy2 : 249|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj3_Sy1 : 217|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj3_Sx2 : 233|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj3_Sx1 : 201|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj3_Precision : 278|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj3_LightSts : 280|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj3_Detect : 200|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj2_Vel : 169|13@1+ (0.01,0) [0|81.91] "m/s"  Scanner
+ SG_ MP_Obj2_Sz : 186|14@1+ (0.01,-50) [-50|113.83] "m"  Scanner
+ SG_ MP_Obj2_Sy2 : 153|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj2_Sy1 : 121|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj2_Sx2 : 137|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj2_Sx1 : 105|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj2_Precision : 182|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj2_LightSts : 184|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj2_Detect : 104|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_Obj1_Vel : 66|13@1+ (0.01,0) [0|81.91] "m/s"  Scanner
+ SG_ MP_Obj1_Sz : 84|14@1+ (0.01,-50) [-50|113.83] "m"  Scanner
+ SG_ MP_Obj1_Sy2 : 50|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj1_Sy1 : 18|16@1+ (0.01,-250) [-250|405.35] "m"  Scanner
+ SG_ MP_Obj1_Sx2 : 34|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj1_Sx1 : 2|16@1+ (0.01,0) [0|655.35] "m"  Scanner
+ SG_ MP_Obj1_Precision : 80|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj1_LightSts : 82|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ MP_Obj1_Detect : 1|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MP_StreetlightDetect : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2021 SignPercData: 20 DAS
+ SG_ SP_SignPerc4_Type : 154|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ SP_SignPerc4_Sy : 133|10@1+ (0.1,-51) [-51|51.3] "m"  Scanner
+ SG_ SP_SignPerc4_Sx : 121|12@1+ (0.1,0) [0|409.5] "m"  Scanner
+ SG_ SP_SignPerc4_Obj_detect : 120|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SP_SignPerc4_CurrSpeed : 144|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ SP_SignPerc4_Color : 152|2@1+ (1,0) [0|2] ""  Scanner
+ SG_ SP_SignPerc3_Type : 114|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ SP_SignPerc3_Sy : 93|10@1+ (0.1,-51) [-51|51.3] "m"  Scanner
+ SG_ SP_SignPerc3_Sx : 81|12@1+ (0.1,0) [0|409.5] "m"  Scanner
+ SG_ SP_SignPerc3_Obj_detect : 80|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SP_SignPerc3_CurrSpeed : 104|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ SP_SignPerc3_Color : 112|2@1+ (1,0) [0|2] ""  Scanner
+ SG_ SP_SignPerc2_Type : 74|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ SP_SignPerc2_Sy : 53|10@1+ (0.1,-51) [-51|51.3] "m"  Scanner
+ SG_ SP_SignPerc2_Sx : 41|12@1+ (0.1,0) [0|409.5] "m"  Scanner
+ SG_ SP_SignPerc2_Obj_detect : 40|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ SP_SignPerc2_CurrSpeed : 64|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ SP_SignPerc2_Color : 72|2@1+ (1,0) [0|2] ""  Scanner
+ SG_ SP_SignPerc1_Type : 34|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ SP_SignPerc1_Color : 32|2@1+ (1,0) [0|2] ""  Scanner
+ SG_ SP_SignPerc1_CurrSpeed : 24|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ SP_SignPerc1_Sy : 13|10@1+ (0.1,-51) [-51|51.3] "m"  Scanner
+ SG_ SP_SignPerc1_Sx : 1|12@1+ (0.1,0) [0|409.5] "m"  Scanner
+ SG_ SP_SignPerc1_Obj_detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2020 LaneFrontPercData: 64 DAS
+ SG_ LP_FRS_SxFA : 230|15@1+ (0.01,-10) [-10|317.67] "m"  Scanner
+ SG_ LP_FRS_Sx90 : 398|16@1+ (0.01,-180) [-180|475.35] "m"  Scanner
+ SG_ LP_FRS_Sx80 : 382|16@1+ (0.01,-160) [-160|495.35] "m"  Scanner
+ SG_ LP_FRS_Sx70 : 366|16@1+ (0.01,-140) [-140|515.35] "m"  Scanner
+ SG_ LP_FRS_Sx60 : 350|16@1+ (0.01,-120) [-120|535.35] "m"  Scanner
+ SG_ LP_FRS_Sx50 : 335|15@1+ (0.01,-100) [-100|227.67] "m"  Scanner
+ SG_ LP_FRS_Sx40 : 320|15@1+ (0.01,-80) [-80|247.67] "m"  Scanner
+ SG_ LP_FRS_Sx30 : 305|15@1+ (0.01,-60) [-60|267.67] "m"  Scanner
+ SG_ LP_FRS_Sx25 : 290|15@1+ (0.01,-50) [-50|277.67] "m"  Scanner
+ SG_ LP_FRS_Sx20 : 275|15@1+ (0.01,-40) [-40|287.67] "m"  Scanner
+ SG_ LP_FRS_Sx15 : 260|15@1+ (0.01,-30) [-30|297.67] "m"  Scanner
+ SG_ LP_FRS_Sx100 : 414|12@1+ (0.1,-200) [-200|209.5] "m"  Scanner
+ SG_ LP_FRS_Sx10 : 245|15@1+ (0.01,-20) [-20|307.67] "m"  Scanner
+ SG_ LP_FRS_Sx0 : 215|15@1+ (0.01,-5) [-5|322.67] "m"  Scanner
+ SG_ LP_FLS_Sx25 : 75|15@1+ (0.01,-50) [-50|277.67] "m"  Scanner
+ SG_ LP_FLS_Sx15 : 45|15@1+ (0.01,-30) [-30|297.67] "m"  Scanner
+ SG_ LP_FLS_SxFA : 15|15@1+ (0.01,-10) [-10|317.67] "m"  Scanner
+ SG_ LP_TrgtLine_S4 : 490|15@1+ (0.01,-80) [-80|247.67] "m"  Scanner
+ SG_ LP_TrgtLine_S3 : 475|15@1+ (0.01,-60) [-60|267.67] "m"  Scanner
+ SG_ LP_TrgtLine_S2 : 460|15@1+ (0.01,-40) [-40|287.67] "m"  Scanner
+ SG_ LP_TrgtLine_S1 : 445|15@1+ (0.01,-20) [-20|307.67] "m"  Scanner
+ SG_ LP_TrgtLine_S0 : 430|15@1+ (0.01,-5) [-5|322.67] "m"  Scanner
+ SG_ LP_FRS_Type : 427|3@1+ (1,0) [0|4] ""  Scanner
+ SG_ LP_FRS_Color : 426|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ LP_FLS_Color : 211|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ LP_FLS_Sx100 : 199|12@1+ (0.1,-200) [-200|209.5] "m"  Scanner
+ SG_ LP_FLS_Sx90 : 183|16@1+ (0.01,-180) [-180|475.35] "m"  Scanner
+ SG_ LP_FLS_Sx80 : 167|16@1+ (0.01,-160) [-160|495.35] "m"  Scanner
+ SG_ LP_FLS_Sx70 : 151|16@1+ (0.01,-140) [-140|515.35] "m"  Scanner
+ SG_ LP_FLS_Sx60 : 135|16@1+ (0.01,-120) [-120|535.35] "m"  Scanner
+ SG_ LP_FLS_Sx50 : 120|15@1+ (0.01,-100) [-100|227.67] "m"  Scanner
+ SG_ LP_FLS_Sx40 : 105|15@1+ (0.01,-80) [-80|247.67] "m"  Scanner
+ SG_ LP_FLS_Sx30 : 90|15@1+ (0.01,-60) [-60|267.67] "m"  Scanner
+ SG_ LP_FLS_Sx20 : 60|15@1+ (0.01,-40) [-40|287.67] "m"  Scanner
+ SG_ LP_FLS_Sx10 : 30|15@1+ (0.01,-20) [-20|307.67] "m"  Scanner
+ SG_ LP_FLS_Type : 212|3@1+ (1,0) [0|4] ""  Scanner
+ SG_ LP_FLS_Sx0 : 0|15@1+ (0.01,-5) [-5|322.67] "m"  Scanner
+
+BO_ 2018 FrontPercData1_3: 48 DAS
+ SG_ FP_Obj3_Orient : 242|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj3_DynID : 251|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj2_Orient : 154|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj2_DynID : 163|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj2_Sy2 : 122|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj2_Sx2 : 111|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj1_DynID : 75|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ FP_Obj1_Orient : 66|9@1+ (1,-180) [-180|180] "deg"  Scanner
+ SG_ FP_Obj1_Sy2 : 34|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj1_Sx2 : 23|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj3_Vy : 231|8@1+ (0.1,-12) [-12|12] "m/s*s"  Scanner
+ SG_ FP_Obj3_Vx : 221|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj3_Type : 239|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj3_Sy2 : 210|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj3_Sx2 : 199|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj3_Sy1 : 188|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj3_Sx1 : 177|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj3_Probabil : 255|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj3_Detect : 176|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj2_Vy : 143|8@1+ (0.1,-12) [-12|12] "m/s*s"  Scanner
+ SG_ FP_Obj2_Vx : 133|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj2_Type : 151|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj2_Sy1 : 100|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj2_Sx1 : 89|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj2_Probabil : 167|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj2_Detect : 88|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ FP_Obj1_Probabil : 79|7@1+ (1,0) [0|100] ""  Scanner
+ SG_ FP_Obj1_Type : 63|3@1+ (1,0) [0|7] ""  Scanner
+ SG_ FP_Obj1_Vy : 55|8@1+ (0.1,-12) [-12|13.5] "m/s*s"  Scanner
+ SG_ FP_Obj1_Vx : 45|10@1+ (0.1,0) [0|102.3] "m/s*s"  Scanner
+ SG_ FP_Obj1_Sy1 : 12|11@1+ (0.1,-102) [-102|102.7] "m"  Scanner
+ SG_ FP_Obj1_Sx1 : 1|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+ SG_ FP_Obj1_Detect : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2016 MainDataFromPerc: 2 DAS
+ SG_ MDF_Perc_ValidDataMlia : 9|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_ValidDataSign : 8|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_ValidDataLane : 7|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_ValidDataRear : 6|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_ValidDataFront : 5|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_LidarDirtSts : 4|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_MrrxDirtSts : 3|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_TicuDirtSts : 2|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_FrcuDirtSts : 1|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ MDF_Perc_FcuDirtSts : 0|1@1+ (1,0) [0|1] ""  Scanner
+
+BO_ 2017 TestData_VISUAL: 48 DAS
+ SG_ TD_VisRoadAngleLvl : 244|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam9ID : 240|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam8ID : 236|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam7ID : 232|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam6ID : 228|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam5ID : 224|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam4ID : 220|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam3ID : 216|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam2ID : 212|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObjDynam1ID : 208|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj9Zone : 280|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj9Orient : 195|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj9DistLong : 197|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj9_Type : 192|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj8Zone : 276|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj8Orient : 179|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj8DistLong : 181|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj8_Type : 176|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj7Zone : 272|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj7Orient : 163|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj7DistLong : 165|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj7_Type : 160|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj6Zone : 268|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj6Orient : 147|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj6DistLong : 149|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj6_Type : 144|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj5Zone : 264|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj5Orient : 131|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj5DistLong : 133|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj5_Type : 128|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj4Zone : 260|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj4Orient : 115|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj4DistLong : 117|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj4_Type : 112|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj3Zone : 256|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj3Orient : 99|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj3DistLong : 101|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj3_Type : 96|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj2Zone : 252|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj2Orient : 83|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj2DistLong : 85|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj2_Type : 80|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj1Zone : 248|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj1Orient : 67|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisObj1DistLong : 69|11@1+ (0.1,0) [0|204.7] ""  Scanner
+ SG_ TD_VisObj1_Type : 64|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLkaAct : 63|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLdwRightLine : 62|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLdwLeftLine : 61|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLdpRightLine : 60|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLdpLeftLine : 59|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLccRightLane : 55|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLccLeftLane : 47|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLaneRType : 56|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLaneRRType : 39|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLaneLType : 52|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisLaneLLType : 38|1@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisFcwTargetObj : 48|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisEgoZone : 44|3@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisAebTargetObj : 40|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisAccTargetObj : 34|4@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VisAccSetDist : 32|2@1+ (1,0) [0|0] ""  Scanner
+ SG_ TD_VISUAL_ErrFlag : 24|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_VISUAL_ErrCode : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_VISUAL_SolverTrans : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_VISUAL_LogicTrans : 0|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 1744 TestData_MLIA: 8 DAS
+ SG_ TD_MLIA_ErrFlag : 56|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_MLIA_ErrCode : 48|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_SolverTrans : 40|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_LogicTrans : 32|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_DistToObj4 : 24|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_DistToObj3 : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_DistToObj2 : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_MLIA_DistToObj1 : 0|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 1731 TestData_RDA: 5 DAS
+ SG_ TD_RDA_SolverTrans : 32|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RDA_LogicTrans : 24|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RDA_ErrFlag : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RDA_ErrCode : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RDA_DistToObjRear : 0|8@1+ (0.1,0) [0|25.5] ""  Scanner
+
+BO_ 1730 TestData_RCW: 12 DAS
+ SG_ TD_RCW_VelRel : 48|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RCW_TimeCrash : 35|12@1+ (0.1,0) [0|409.5] ""  Scanner
+ SG_ TD_RCW_LatObj : 19|16@1+ (0.01,-255) [-255|400.35] ""  Scanner
+ SG_ TD_RCW_DimanWh : 56|12@1+ (0.1,0) [0|409.5] ""  Scanner
+ SG_ TD_RCW_LogicTrans : 11|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_RCW_DistToObjRear : 0|11@1+ (0.1,0) [0|204.7] "m"  Scanner
+
+BO_ 1729 TestData_LCC: 6 DAS
+ SG_ TD_LCC_SetVibration : 28|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LCC_SetSound : 27|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LCC_SetMode : 29|2@1+ (1,0) [0|3] ""  Scanner
+ SG_ TD_LCC_EnaSts : 26|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LCC_WarnReqTransRight : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LCC_WarnReqTransLeft : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LCC_IsObjInRightCvwZone : 25|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LCC_IsObjInLeftCvwZone : 24|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LCC_LogicTrans : 0|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LCC_ErrFlag : 32|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LCC_ErrCode : 40|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 1728 TestData_LDW: 12 DAS
+ SG_ TD_LDW_YawRate_dtLeft : 32|11@1+ (0.01,-10) [-10|10.47] ""  Scanner
+ SG_ TD_LDW_WarnTimeRight : 70|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnTimeLeft : 60|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnPredictRight : 71|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnPredictLeft : 61|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnDistRight : 69|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnDistLeft : 59|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_LDW_WarnBlockTransLeft : 10|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_LDW_VdepartureLeft : 43|10@1+ (0.01,-3) [-3|7.23] ""  Scanner
+ SG_ TD_LDW_TurnRadiusLeft : 18|14@1+ (0.1,0) [0|1638.3] ""  Scanner
+ SG_ TD_LDW_TTLCTransLeft : 14|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_LDW_TTLCLeft : 53|6@1+ (0.1,0) [0|6.3] ""  Scanner
+ SG_ TD_LDW_SolverTransRight : 64|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ TD_LDW_SolverTransLeft : 5|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ TD_LDW_LogicTrans : 0|5@1+ (1,0) [0|31] ""  Scanner
+
+BO_ 1720 TestData_LKA: 6 DAS
+ SG_ TD_LKA_ErrFlag : 33|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LKA_ErrCode : 9|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LKA_SolverTrans : 25|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_LKA_LogicTrans : 17|8@1+ (1,0) [0|255] "deg"  Scanner
+ SG_ TD_LKA_TargetAngle : 0|9@1+ (1,-180) [-180|331] "deg"  Scanner
+
+BO_ 1715 TestData_FIU: 2 DAS
+ SG_ TD_FIU_SolverTrans : 8|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_FIU_LogicTrans : 0|8@1+ (1,0) [0|255] ""  Scanner
+
+BO_ 1714 TestData_AEB: 8 DAS
+ SG_ TD_AEB_TargetDetect : 56|4@1+ (1,0) [0|15] ""  Scanner
+ SG_ TD_AEB_SolverTrans : 48|7@1+ (1,0) [0|127] ""  Scanner
+ SG_ TD_AEB_LogicTrans : 40|7@1+ (1,0) [0|127] ""  Scanner
+ SG_ TD_AEB_LeadSpeedReal_kmh : 32|8@1+ (1,-10) [-10|245] "kmh"  Scanner
+ SG_ TD_AEB_LeadAccelReal : 24|7@1+ (0.1,-6) [-6|6.7] "m*s^2"  Scanner
+ SG_ TD_AEB_ErrFlag : 16|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_AEB_ErrCode : 10|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ TD_AEB_DistRealm : 0|10@1+ (0.2,0) [0|204.6] "m"  Scanner
+
+BO_ 1713 TestData_ACC: 8 DAS
+ SG_ TD_ACC_ErrCode : 59|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ TD_ACC_ErrFlag : 58|1@1+ (1,0) [0|1] ""  Scanner
+ SG_ TD_ACC_VlcTrans : 53|5@1+ (1,0) [0|31] ""  Scanner
+ SG_ TD_ACC_SolverTrans : 46|7@1+ (1,0) [0|127] ""  Scanner
+ SG_ TD_ACC_LogicTrans : 38|8@1+ (1,0) [0|255] ""  Scanner
+ SG_ TD_ACC_LeadAccelReal : 31|7@1+ (0.1,-6) [-6|6.7] "m*s^2"  Scanner
+ SG_ TD_ACC_LeadSpeedReal_kmh : 23|8@1+ (1,-10) [-10|245] "m*s^2"  Scanner
+ SG_ TD_ACC_DistRealm : 13|10@1+ (0.2,0) [0|204.6] "m"  Scanner
+ SG_ TD_ACC_DistSetm : 4|9@1+ (0.2,0) [0|102.2] "m"  Scanner
+ SG_ TD_ACC_TargetDetect : 0|4@1+ (1,0) [0|15] ""  Scanner
+
+
+
+CM_ SG_ 2005 MP_Obj19_Vel "Speed of object ¹ 19";
+CM_ SG_ 2005 MP_Obj19_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj19_Sy2 "Lat Distande to obj ¹ 19";
+CM_ SG_ 2005 MP_Obj19_Sy1 "Lat Distande to obj ¹ 19";
+CM_ SG_ 2005 MP_Obj19_Sx2 "Distance to Object ¹ 19";
+CM_ SG_ 2005 MP_Obj19_Sx1 "Distance to Object ¹ 19";
+CM_ SG_ 2005 MP_Obj19_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj19_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj19_Detect "Detect flag of object ¹ 19";
+CM_ SG_ 2005 MP_Obj18_Vel "Speed of object ¹ 18";
+CM_ SG_ 2005 MP_Obj18_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj18_Sy2 "Lat Distande to obj ¹ 18";
+CM_ SG_ 2005 MP_Obj18_Sy1 "Lat Distande to obj ¹ 18";
+CM_ SG_ 2005 MP_Obj18_Sx2 "Distance to Object ¹ 18";
+CM_ SG_ 2005 MP_Obj18_Sx1 "Distance to Object ¹ 18";
+CM_ SG_ 2005 MP_Obj18_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj18_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj18_Detect "Detect flag of object ¹ 18";
+CM_ SG_ 2005 MP_Obj17_Vel "Speed of object 17 ¹ 17";
+CM_ SG_ 2005 MP_Obj17_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj17_Sy2 "Lat Distande to obj ¹ 17";
+CM_ SG_ 2005 MP_Obj17_Sy1 "Lat Distande to obj ¹ 17";
+CM_ SG_ 2005 MP_Obj17_Sx2 "Distance to Object ¹ 17";
+CM_ SG_ 2005 MP_Obj17_Sx1 "Distance to Object ¹ 17";
+CM_ SG_ 2005 MP_Obj17_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj17_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj17_Detect "Detect flag of object ¹ 17";
+CM_ SG_ 2005 MP_Obj16_Vel "Speed of object ¹ 16";
+CM_ SG_ 2005 MP_Obj16_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj16_Sy2 "Lat Distande to obj ¹ 16";
+CM_ SG_ 2005 MP_Obj16_Sy1 "Lat Distande to obj ¹ 16";
+CM_ SG_ 2005 MP_Obj16_Sx2 "Distance to Object ¹ 16";
+CM_ SG_ 2005 MP_Obj16_Sx1 "Distance to Object ¹ 16";
+CM_ SG_ 2005 MP_Obj16_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj16_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj16_Detect "Detect flag of object ¹ 16";
+CM_ SG_ 2005 MP_Obj15_Vel "Speed of object ¹ 15";
+CM_ SG_ 2005 MP_Obj15_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj15_Sy2 "Lat Distande to obj ¹ 15";
+CM_ SG_ 2005 MP_Obj15_Sy1 "Lat Distande to obj ¹ 15";
+CM_ SG_ 2005 MP_Obj15_Sx2 "Distance to Object ¹ 15";
+CM_ SG_ 2005 MP_Obj15_Sx1 "Distance to Object ¹ 15";
+CM_ SG_ 2005 MP_Obj15_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj15_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj15_Detect "Detect flag of object ¹ 15";
+CM_ SG_ 2005 MP_Obj14_Vel "Speed of object ¹ 14";
+CM_ SG_ 2005 MP_Obj14_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj14_Sy2 "Lat Distande to obj ¹ 14";
+CM_ SG_ 2005 MP_Obj14_Sy1 "Lat Distande to obj ¹ 14";
+CM_ SG_ 2005 MP_Obj14_Sx2 "Distance to Object ¹ 14";
+CM_ SG_ 2005 MP_Obj14_Sx1 "Distance to Object ¹ 14";
+CM_ SG_ 2005 MP_Obj14_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj14_LightSts "0 - Lights off; 1 - Lights on2";
+CM_ SG_ 2005 MP_Obj14_Detect "Detect flag of object ¹ 14";
+CM_ SG_ 2005 MP_Obj13_Vel "Speed of object ¹ 13";
+CM_ SG_ 2005 MP_Obj13_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj13_Sy2 "Lat Distande to obj ¹ 13";
+CM_ SG_ 2005 MP_Obj13_Sy1 "Lat Distande to obj ¹ 13";
+CM_ SG_ 2005 MP_Obj13_Sx2 "Distance to Object ¹ 13";
+CM_ SG_ 2005 MP_Obj13_Sx1 "Distance to Object ¹ 13";
+CM_ SG_ 2005 MP_Obj13_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj13_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj13_Detect "Detect flag of object ¹ 13";
+CM_ SG_ 2005 MP_Obj12_Vel "Speed of object ¹ 12";
+CM_ SG_ 2005 MP_Obj12_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2005 MP_Obj12_Sy2 "Lat Distande to obj ¹ 12";
+CM_ SG_ 2005 MP_Obj12_Sy1 "Lat Distande to obj ¹ 12";
+CM_ SG_ 2005 MP_Obj12_Sx2 "Distance to Object ¹ 12";
+CM_ SG_ 2005 MP_Obj12_Sx1 "Distance to Object ¹ 12";
+CM_ SG_ 2005 MP_Obj12_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2005 MP_Obj12_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2005 MP_Obj12_Detect "Detect flag of object ¹ 12";
+CM_ SG_ 2009 RP_Obj18_Vy "Lat speed ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Vx "Long speed ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Sy2 "Lat distande ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Sy1 "Long distance ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Sx2 "Lat distande ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Sx1 "Long distance ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Probabil "probability ¹ 18";
+CM_ SG_ 2009 RP_Obj18_Detect "Rear Left object ¹ 18";
+CM_ SG_ 2009 RP_Obj17_Vy "Lat speed ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Vx "Long speed ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Sy2 "Lat distande ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Sy1 "Lat distande ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Sx2 "Long distance ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Sx1 "Long distance ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Probabil "probability ¹ 17";
+CM_ SG_ 2009 RP_Obj17_Detect "Rear Left object ¹ 17";
+CM_ SG_ 2008 RP_Obj16_Vy "Lat speed ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Vx "Long speed ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Sy2 "Lat distande ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Sy1 "Lat distande ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Sx2 "Long distance ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Sx1 "Long distance ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Probabil "probability ¹ 16";
+CM_ SG_ 2008 RP_Obj16_Detect "Rear Left object ¹ 16";
+CM_ SG_ 2008 RP_Obj15_Vy "Lat speed ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Vx "Long speed ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Sy2 "Lat distande ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Sy1 "Lat distande ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Sx2 "Long distance ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Sx1 "Long distance ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Probabil "probability ¹ 15";
+CM_ SG_ 2008 RP_Obj15_Detect "Rear Left object ¹ 15";
+CM_ SG_ 2007 RP_Obj14_Vy "Lat speed ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Vx "Long speed ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Sy2 "Lat distande ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Sy1 "Lat distande ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Sx2 "Long distance ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Sx1 "Long distance ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Probabil "probability ¹ 14";
+CM_ SG_ 2007 RP_Obj14_Detect "Rear Left object ¹ 14";
+CM_ SG_ 2007 RP_Obj13_Vy "Lat speed ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Vx "Long speed ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Sy2 "Lat distande ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Sy1 "Lat distande ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Sx2 "Long distance ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Sx1 "Long distance ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Probabil "probability ¹ 13";
+CM_ SG_ 2007 RP_Obj13_Detect "Rear Left object ¹ 13";
+CM_ SG_ 2007 RP_Obj12_Vy "Lat speed ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Vx "Long speed ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Sy2 "Lat distande ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Sy1 "Lat distande ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Sx2 "Long distance ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Sx1 "Long distance ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Probabil "probability ¹ 12";
+CM_ SG_ 2007 RP_Obj12_Detect "Rear Left object ¹ 12";
+CM_ SG_ 2006 MP_Obj21_Vel "Speed of object ¹ 21";
+CM_ SG_ 2006 MP_Obj21_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2006 MP_Obj21_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2006 MP_Obj21_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2006 MP_Obj21_Sy2 "Lat Distande to obj ¹ 21";
+CM_ SG_ 2006 MP_Obj21_Sx2 "Distance to Object ¹ 21";
+CM_ SG_ 2006 MP_Obj21_Sy1 "Lat Distande to obj ¹ 21";
+CM_ SG_ 2006 MP_Obj21_Sx1 "Distance to Object ¹ 21";
+CM_ SG_ 2006 MP_Obj21_Detect "Detect flag of object ¹ 21";
+CM_ SG_ 2006 MP_Obj20_Vel "Speed of object ¹ 20";
+CM_ SG_ 2006 MP_Obj20_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2006 MP_Obj20_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2006 MP_Obj20_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2006 MP_Obj20_Sy2 "Lat Distande to obj ¹ 20";
+CM_ SG_ 2006 MP_Obj20_Sx2 "Distance to Object ¹ 20";
+CM_ SG_ 2006 MP_Obj20_Sy1 "Lat Distande to obj ¹ 20";
+CM_ SG_ 2006 MP_Obj20_Sx1 "Distance to Object ¹ 20";
+CM_ SG_ 2006 MP_Obj20_Detect "Detect flag of object ¹ 20";
+CM_ SG_ 2004 MP_Obj11_Vel "Speed of object ¹ 11";
+CM_ SG_ 2004 MP_Obj11_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj11_Sy2 "Lat Distande to obj ¹ 11";
+CM_ SG_ 2004 MP_Obj11_Sy1 "Lat Distande to obj ¹ 11";
+CM_ SG_ 2004 MP_Obj11_Sx2 "Distance to Object ¹ 11";
+CM_ SG_ 2004 MP_Obj11_Sx1 "Distance to Object ¹ 11";
+CM_ SG_ 2004 MP_Obj11_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj11_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj11_Detect "Detect flag of object ¹ 11";
+CM_ SG_ 2004 MP_Obj10_Vel "Speed of object ¹ 10";
+CM_ SG_ 2004 MP_Obj10_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj10_Sy2 "Lat Distande to obj ¹ 10";
+CM_ SG_ 2004 MP_Obj10_Sy1 "Lat Distande to obj ¹ 10";
+CM_ SG_ 2004 MP_Obj10_Sx2 "Distance to Object ¹ 10";
+CM_ SG_ 2004 MP_Obj10_Sx1 "Distance to Object ¹ 10";
+CM_ SG_ 2004 MP_Obj10_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj10_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj10_Detect "Detect flag of object ¹ 10";
+CM_ SG_ 2004 MP_Obj9_Vel "Speed of object ¹ 9";
+CM_ SG_ 2004 MP_Obj9_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj9_Sy2 "Lat Distande to obj ¹ 9";
+CM_ SG_ 2004 MP_Obj9_Sy1 "Lat Distande to obj ¹ 9";
+CM_ SG_ 2004 MP_Obj9_Sx2 "Distance to Object ¹ 9";
+CM_ SG_ 2004 MP_Obj9_Sx1 "Distance to Object ¹ 9";
+CM_ SG_ 2004 MP_Obj9_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj9_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj9_Detect "Detect flag of object ¹ 9";
+CM_ SG_ 2004 MP_Obj8_Vel "Speed of object ¹ 8";
+CM_ SG_ 2004 MP_Obj8_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj8_Sy2 "Lat Distande to obj ¹ 8";
+CM_ SG_ 2004 MP_Obj8_Sy1 "Lat Distande to obj ¹ 8";
+CM_ SG_ 2004 MP_Obj8_Sx2 "Distance to Object ¹ 8";
+CM_ SG_ 2004 MP_Obj8_Sx1 "Distance to Object ¹ 8";
+CM_ SG_ 2004 MP_Obj8_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj8_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj8_Detect "Detect flag of object ¹ 8";
+CM_ SG_ 2004 MP_Obj7_Vel "Speed of object ¹ 7";
+CM_ SG_ 2004 MP_Obj7_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj7_Sy2 "Lat Distande to obj ¹ 7";
+CM_ SG_ 2004 MP_Obj7_Sy1 "Lat Distande to obj ¹ 7";
+CM_ SG_ 2004 MP_Obj7_Sx2 "Distance to Object ¹ 7";
+CM_ SG_ 2004 MP_Obj7_Sx1 "Distance to Object ¹ 7";
+CM_ SG_ 2004 MP_Obj7_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj7_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj7_Detect "Detect flag of object ¹ 7";
+CM_ SG_ 2004 MP_Obj6_Vel "Speed of object ¹ 6";
+CM_ SG_ 2004 MP_Obj6_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2004 MP_Obj6_Sy2 "Lat Distande to obj ¹ 6";
+CM_ SG_ 2004 MP_Obj6_Sy1 "Lat Distande to obj ¹ 6";
+CM_ SG_ 2004 MP_Obj6_Sx2 "Distance to Object ¹ 6";
+CM_ SG_ 2004 MP_Obj6_Sx1 "Distance to Object ¹ 6";
+CM_ SG_ 2004 MP_Obj6_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2004 MP_Obj6_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2004 MP_Obj6_Detect "Detect flag of object ¹ 6";
+CM_ SG_ 2019 FP_Obj4_Vy "Lat speed";
+CM_ SG_ 2019 FP_Obj4_Vx "Long speed";
+CM_ SG_ 2019 FP_Obj4_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2019 FP_Obj4_Sy2 "Lat distande point2";
+CM_ SG_ 2019 FP_Obj4_Sy1 "Lat distande point1";
+CM_ SG_ 2019 FP_Obj4_Sx2 "Long distance point2";
+CM_ SG_ 2019 FP_Obj4_Sx1 "Long distance point1";
+CM_ SG_ 2019 FP_Obj4_Probabil "probability";
+CM_ SG_ 2019 FP_Obj4_Orient "Object Orientation";
+CM_ SG_ 2019 FP_Obj4_DynID "Dynamic ID";
+CM_ SG_ 2019 FP_Obj4_Detect "Distant object in Left lane";
+CM_ SG_ 1766 RES_GPU_TicuStaticAngYaw "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_TicuStaticAngPitch "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_TicuVirtYaw "Virtual Yaw angle -  calculated in motion";
+CM_ SG_ 1766 RES_GPU_TicuErrorSts "0 - error not found
+1- wire break
+2- wire short circuit
+3 - image not found
+4 - image not clear (cloudy)";
+CM_ SG_ 1766 RES_GPU_TicuCalibSts "0- calibration not found
+1- Compleate
+2- in progress
+3- calibration Fault (target not found)
+4 - calibration Fault (target is small)
+5 - Serial number Fault";
+CM_ SG_ 1766 RES_GPU_LidStaticAngYaw "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_LidStaticAngPitch "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_LidVirtYaw "Virtual Yaw angle -  calculated in motion";
+CM_ SG_ 1766 RES_GPU_LidErrorSts "0 - error not found
+1- wire break
+2- wire short circuit
+3 - image not found
+4 - image not clear (cloudy)";
+CM_ SG_ 1766 RES_GPU_LidCalibSts "0- calibration not found
+1- Compleate
+2- in progress
+3- calibration Fault (target not found)
+4 - calibration Fault (target is small)
+5 - Serial number Fault";
+CM_ SG_ 1766 RES_GPU_FrcuVirtYaw "Virtual Yaw angle -  calculated in motion";
+CM_ SG_ 1766 RES_GPU_FrcuProb "0 - angle of radar not valid
+
+0.01.....0.99
+
+1 - angle of radar maximum valid";
+CM_ SG_ 1766 RES_GPU_FrcuErrorSts "0 - error not found
+1- Buss Off
+2- Data not valid";
+CM_ SG_ 1766 RES_GPU_FcuWErrorSts "0 - error not found
+1- wire break
+2- wire short circuit
+3 - Image not found
+4 - image not clear (cloudy)";
+CM_ SG_ 1766 RES_GPU_FcuStaticAngYaw "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_FcuStaticAngPitch "Static Yaw angle  -  calculated on stand";
+CM_ SG_ 1766 RES_GPU_FcuNVirtYaw "Virtual Yaw angle for -  calculated in motion";
+CM_ SG_ 1766 RES_GPU_FcuNErrorSts "0 - error not found
+1- wire break
+2- wire short circuit
+3 - Image not found
+4 - image not clear (cloudy)";
+CM_ SG_ 1766 RES_GPU_FcuCalibSts "0- calibration not found
+1- Compleate
+2- in progress
+3- calibration Fault (target not found)
+4 - calibration Fault (target is small)
+5 - Serial number Fault";
+CM_ SG_ 1765 REQ_GPU_TicuGetImg "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_TicuCalibStop "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_TicuCalibStart "0 - no req
+1 - Req to TICU calibration
+2 - Clear DTC (TICU ID fault)
+";
+CM_ SG_ 1765 REQ_GPU_LidGetImg "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_LidCalibStop "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_LidCalibStart "0 - no req
+1 - Req to LIDAR calibration
+2 - Clear DTC(Lidar ID fault)
+";
+CM_ SG_ 1765 REQ_GPU_FrcuVirtAngReset "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_FrcuGetImg "0 - no req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_FcuVirtAngReset "0 - no req
+1 - req";
+CM_ SG_ 1765 REQ_GPU_FcuSetYawAngle "- 3.3...-3 - no Req
+-2.9 ... +2.9 - Req";
+CM_ SG_ 1765 REQ_GPU_FcuSetPitchAngle "- 3.3...-3 - no Req
+-2.9 ... +2.9 - Req";
+CM_ SG_ 1765 REQ_GPU_FcuGetWideImg "0 - no Req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_FcuGetNarrowImg "0 - no Req
+1 - Req";
+CM_ SG_ 1765 REQ_GPU_FcuCalibStop "0 - no req
+1 - req";
+CM_ SG_ 1765 REQ_GPU_FcuCalibStart "0 - no req
+1 - Req to wide camera for calibration
+2 - Clear DTC(camera ID fault)
+3 - Req to write new angle Yaw and Pitch to GPU ";
+CM_ SG_ 2022 FP_Obj11_Orient "Object Orientation";
+CM_ SG_ 2022 FP_Obj11_DynID "Dynamic ID";
+CM_ SG_ 2022 FP_Obj11_Sy2 "Lat distande";
+CM_ SG_ 2022 FP_Obj11_Sx2 "Long distance";
+CM_ SG_ 2022 FP_Obj10_Orient "Object Orientation";
+CM_ SG_ 2022 FP_Obj10_DynID "Dynamic ID";
+CM_ SG_ 2022 FP_Obj10_Sy2 "Lat distande";
+CM_ SG_ 2022 FP_Obj10_Sx2 "Long distance";
+CM_ SG_ 2022 FP_Obj9_Orient "Object Orientation";
+CM_ SG_ 2022 FP_Obj9_DynID "Dynamic ID";
+CM_ SG_ 2022 FP_Obj9_Sy2 "Lat distande";
+CM_ SG_ 2022 FP_Obj9_Sx2 "Long distance";
+CM_ SG_ 2022 FP_Obj8_Orient "Object Orientation";
+CM_ SG_ 2022 FP_Obj8_DynID "Dynamic ID";
+CM_ SG_ 2022 FP_Obj8_Sy2 "Lat distande";
+CM_ SG_ 2022 FP_Obj8_Sx2 "Long distance";
+CM_ SG_ 2022 FP_Obj7_DynID "Dynamic ID";
+CM_ SG_ 2022 FP_Obj7_Orient "Object Orientation";
+CM_ SG_ 2022 FP_Obj7_Sy2 "Lat distande";
+CM_ SG_ 2022 FP_Obj7_Sx2 "Long distance";
+CM_ SG_ 2022 FP_Obj9_Vy "Lat speed";
+CM_ SG_ 2022 FP_Obj9_Vx "Long speed";
+CM_ SG_ 2022 FP_Obj9_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2022 FP_Obj9_Sy1 "Lat distande";
+CM_ SG_ 2022 FP_Obj9_Sx1 "Long distance";
+CM_ SG_ 2022 FP_Obj9_Probabil "probability";
+CM_ SG_ 2022 FP_Obj9_Detect "Cross object ¹9";
+CM_ SG_ 2022 FP_Obj8_Vy "Lat speed";
+CM_ SG_ 2022 FP_Obj8_Vx "Long speed";
+CM_ SG_ 2022 FP_Obj8_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2022 FP_Obj8_Sy1 "Lat distande";
+CM_ SG_ 2022 FP_Obj8_Sx1 "Long distance";
+CM_ SG_ 2022 FP_Obj8_Probabil "probability";
+CM_ SG_ 2022 FP_Obj8_Detect "Oncoming object on the left far";
+CM_ SG_ 2022 FP_Obj7_Vy "Lat speed";
+CM_ SG_ 2022 FP_Obj7_Vx "Long speed";
+CM_ SG_ 2022 FP_Obj7_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2022 FP_Obj7_Sy1 "Lat distande";
+CM_ SG_ 2022 FP_Obj7_Sx1 "Long distance";
+CM_ SG_ 2022 FP_Obj7_Probabil "probability";
+CM_ SG_ 2022 FP_Obj7_Detect "Oncoming object left near";
+CM_ SG_ 2022 FP_Obj11_Vy "Lat speed";
+CM_ SG_ 2022 FP_Obj11_Vx "Long speed";
+CM_ SG_ 2022 FP_Obj11_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2022 FP_Obj11_Sy1 "Lat distande";
+CM_ SG_ 2022 FP_Obj11_Sx1 "Long distance";
+CM_ SG_ 2022 FP_Obj11_Probabil "probability";
+CM_ SG_ 2022 FP_Obj11_Detect "Cross object ¹11";
+CM_ SG_ 2022 FP_Obj10_Vy "Lat speed";
+CM_ SG_ 2022 FP_Obj10_Vx "Long speed";
+CM_ SG_ 2022 FP_Obj10_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2022 FP_Obj10_Sy1 "Lat distande";
+CM_ SG_ 2022 FP_Obj10_Sx1 "Long distance";
+CM_ SG_ 2022 FP_Obj10_Probabil "probability";
+CM_ SG_ 2022 FP_Obj10_Detect "Cross object ¹10";
+CM_ SG_ 1716 M_VisualStart "Nearest object in our lane";
+CM_ SG_ 1716 M_SignPerc_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_RearPerc_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_RdaStart "Nearest object in our lane";
+CM_ SG_ 1716 M_RcwStart "Nearest object in our lane";
+CM_ SG_ 1716 M_MliaStart "Nearest object in our lane";
+CM_ SG_ 1716 M_MliaPerc_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_MainData_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_LkaStart "Nearest object in our lane";
+CM_ SG_ 1716 M_LdwStart "Nearest object in our lane";
+CM_ SG_ 1716 M_LccStart "Nearest object in our lane";
+CM_ SG_ 1716 M_LanePerc_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_FrontPerc_Start "Nearest object in our lane";
+CM_ SG_ 1716 M_FiuStart "Nearest object in our lane";
+CM_ SG_ 1716 M_AebStart "Nearest object in our lane";
+CM_ SG_ 1716 M_AccStart "Nearest object in our lane";
+CM_ SG_ 2003 MP_Obj5_Vel "Speed of Object ¹ 5";
+CM_ SG_ 2003 MP_Obj5_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2003 MP_Obj5_Sy2 "Lat Distande to obj ¹ 5";
+CM_ SG_ 2003 MP_Obj5_Sy1 "Lat Distande to obj ¹ 5";
+CM_ SG_ 2003 MP_Obj5_Sx2 "Distance to Object ¹ 5";
+CM_ SG_ 2003 MP_Obj5_Sx1 "Distance to Object ¹ 5";
+CM_ SG_ 2003 MP_Obj5_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2003 MP_Obj5_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2003 MP_Obj5_Detect "Detect flag of object ¹ 5";
+CM_ SG_ 2003 MP_Obj4_Vel "Speed of Object ¹ 4";
+CM_ SG_ 2003 MP_Obj4_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2003 MP_Obj4_Sy2 "Lat Distande to obj ¹ 4";
+CM_ SG_ 2003 MP_Obj4_Sy1 "Lat Distande to obj ¹ 4";
+CM_ SG_ 2003 MP_Obj4_Sx2 "Distance to Object ¹ 4";
+CM_ SG_ 2003 MP_Obj4_Sx1 "Distance to Object ¹ 4";
+CM_ SG_ 2003 MP_Obj4_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2003 MP_Obj4_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2003 MP_Obj4_Detect "Detect flag of object ¹ 4";
+CM_ SG_ 2003 MP_Obj3_Vel "Speed of Object ¹ 3";
+CM_ SG_ 2003 MP_Obj3_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2003 MP_Obj3_Sy2 "Lat Distande to obj ¹ 3";
+CM_ SG_ 2003 MP_Obj3_Sy1 "Lat Distande to obj ¹ 3";
+CM_ SG_ 2003 MP_Obj3_Sx2 "Distance to Object ¹ 3";
+CM_ SG_ 2003 MP_Obj3_Sx1 "Distance to Object ¹ 3";
+CM_ SG_ 2003 MP_Obj3_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2003 MP_Obj3_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2003 MP_Obj3_Detect "Detect flag of object ¹ 3";
+CM_ SG_ 2003 MP_Obj2_Vel "Speed of Object 2 ¹2";
+CM_ SG_ 2003 MP_Obj2_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2003 MP_Obj2_Sy2 "Lat Distande to obj ¹2";
+CM_ SG_ 2003 MP_Obj2_Sy1 "Lat Distande to obj ¹ 2";
+CM_ SG_ 2003 MP_Obj2_Sx2 "Distance to Object ¹ 2";
+CM_ SG_ 2003 MP_Obj2_Sx1 "Distance to Object ¹ 2";
+CM_ SG_ 2003 MP_Obj2_Precision "0 - Low percision; 1 - High percision";
+CM_ SG_ 2003 MP_Obj2_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2003 MP_Obj2_Detect "Detect flag of object ¹ 2";
+CM_ SG_ 2003 MP_Obj1_Vel "Speed of Object ¹ 1";
+CM_ SG_ 2003 MP_Obj1_Sz "Difference in the height of the roadway between the detected object and our vehicle (center of the rear axle)";
+CM_ SG_ 2003 MP_Obj1_Sy2 "Lat Distande to obj ¹ 1";
+CM_ SG_ 2003 MP_Obj1_Sy1 "Lat Distande to obj ¹ 1";
+CM_ SG_ 2003 MP_Obj1_Sx2 "Distance to Object ¹ 1";
+CM_ SG_ 2003 MP_Obj1_Sx1 "Distance to Object ¹ 1";
+CM_ SG_ 2003 MP_Obj1_Precision "0 - Low percision 1 - High percision";
+CM_ SG_ 2003 MP_Obj1_LightSts "0 - Lights off; 1 - Lights on";
+CM_ SG_ 2003 MP_Obj1_Detect "Detect flag of object ¹ 1";
+CM_ SG_ 2003 MP_StreetlightDetect "Detect flag of Street Light";
+CM_ SG_ 2021 SP_SignPerc4_Type "0-Trash 1-SpLim 2-Cancel_SPlim 3-Cancel_All 4-Crosswalk_Far 5-Crosswalk_Near 6-Speed_bump_Far 7-Speed_bump_Near 8-Main_Road 9-Second_Road 10-Stop 11-Overtake_Taboo 12-Cancel_Overtake_Taboo";
+CM_ SG_ 2021 SP_SignPerc4_Sy "Lat distande";
+CM_ SG_ 2021 SP_SignPerc4_Sx "Long distance";
+CM_ SG_ 2021 SP_SignPerc4_Obj_detect "Detect Sign flag";
+CM_ SG_ 2021 SP_SignPerc4_CurrSpeed "Speed on Sign";
+CM_ SG_ 2021 SP_SignPerc4_Color "Color of Sign. 0-undefine 1-white 2-yellow";
+CM_ SG_ 2021 SP_SignPerc3_Type "0-Trash 1-SpLim 2-Cancel_SPlim 3-Cancel_All 4-Crosswalk_Far 5-Crosswalk_Near 6-Speed_bump_Far 7-Speed_bump_Near 8-Main_Road 9-Second_Road 10-Stop 11-Overtake_Taboo 12-Cancel_Overtake_Taboo";
+CM_ SG_ 2021 SP_SignPerc3_Sy "Lat distande";
+CM_ SG_ 2021 SP_SignPerc3_Sx "Long distance";
+CM_ SG_ 2021 SP_SignPerc3_Obj_detect "Detect Sign flag";
+CM_ SG_ 2021 SP_SignPerc3_CurrSpeed "Speed on Sign";
+CM_ SG_ 2021 SP_SignPerc3_Color "Color of Sign. 0-undefine 1-white 2-yellow";
+CM_ SG_ 2021 SP_SignPerc2_Type "0-Trash 1-SpLim 2-Cancel_SPlim 3-Cancel_All 4-Crosswalk_Far 5-Crosswalk_Near 6-Speed_bump_Far 7-Speed_bump_Near 8-Main_Road 9-Second_Road 10-Stop 11-Overtake_Taboo 12-Cancel_Overtake_Taboo";
+CM_ SG_ 2021 SP_SignPerc2_Sy "Lat distande";
+CM_ SG_ 2021 SP_SignPerc2_Sx "Long distance";
+CM_ SG_ 2021 SP_SignPerc2_Obj_detect "Detect Sign flag";
+CM_ SG_ 2021 SP_SignPerc2_CurrSpeed "Speed on Sign";
+CM_ SG_ 2021 SP_SignPerc2_Color "Color of Sign. 0-undefine 1-white 2-yellow";
+CM_ SG_ 2021 SP_SignPerc1_Type "0-Trash 1-SpLim 2-Cancel_SPlim 3-Cancel_All 4-Crosswalk_Far 5-Crosswalk_Near 6-Speed_bump_Far 7-Speed_bump_Near 8-Main_Road 9-Second_Road 10-Stop 11-Overtake_Taboo 12-Cancel_Overtake_Taboo";
+CM_ SG_ 2021 SP_SignPerc1_Color "Color of Sign. 0-undefine 1-white 2-yellow";
+CM_ SG_ 2021 SP_SignPerc1_CurrSpeed "Speed on Sign";
+CM_ SG_ 2021 SP_SignPerc1_Sy "Lat distande";
+CM_ SG_ 2021 SP_SignPerc1_Sx "Long distance";
+CM_ SG_ 2021 SP_SignPerc1_Obj_detect "Detect Sign flag";
+CM_ SG_ 2020 LP_FRS_SxFA "Right point at a distance of front axle.";
+CM_ SG_ 2020 LP_FRS_Sx90 "Right point at a distance of 90 meters.";
+CM_ SG_ 2020 LP_FRS_Sx80 "Right point at a distance of 80 meters.";
+CM_ SG_ 2020 LP_FRS_Sx70 "Right point at a distance of 70 meters.";
+CM_ SG_ 2020 LP_FRS_Sx60 "Right point at a distance of 60 meters.";
+CM_ SG_ 2020 LP_FRS_Sx50 "Right point at a distance of 50 meters.";
+CM_ SG_ 2020 LP_FRS_Sx40 "Right point at a distance of 40 meters.";
+CM_ SG_ 2020 LP_FRS_Sx30 "Right point at a distance of 30 meters.";
+CM_ SG_ 2020 LP_FRS_Sx25 "Right point at a distance of 25 meters.";
+CM_ SG_ 2020 LP_FRS_Sx20 "Right point at a distance of 20 meters.";
+CM_ SG_ 2020 LP_FRS_Sx15 "Right point at a distance of 15 meters.";
+CM_ SG_ 2020 LP_FRS_Sx100 "Right point at a distance of 100 meters.";
+CM_ SG_ 2020 LP_FRS_Sx10 "Right point at a distance of 10 meters.";
+CM_ SG_ 2020 LP_FRS_Sx0 "Right point at a distance of 0 meters.";
+CM_ SG_ 2020 LP_FLS_Sx25 "Left point at a distance of 25 meters.";
+CM_ SG_ 2020 LP_FLS_Sx15 "Left point at a distance of 15 meters.";
+CM_ SG_ 2020 LP_FLS_SxFA "Left point at a distance of front axle.";
+CM_ SG_ 2020 LP_TrgtLine_S4 "Target point at a distance of 70 meters.";
+CM_ SG_ 2020 LP_TrgtLine_S3 "Target point at a distance of 40 meters.";
+CM_ SG_ 2020 LP_TrgtLine_S2 "Target point at a distance of 20 meters.";
+CM_ SG_ 2020 LP_TrgtLine_S1 "Target point at a distance of 10 meters.";
+CM_ SG_ 2020 LP_TrgtLine_S0 "Target point at a distance of 0 meters.";
+CM_ SG_ 2020 LP_FRS_Type "0 - line not found  1 - solid 2- broken  3- Virtual";
+CM_ SG_ 2020 LP_FRS_Color "0 - white 1 - yellow";
+CM_ SG_ 2020 LP_FLS_Color "0 - white 1 - yellow";
+CM_ SG_ 2020 LP_FLS_Sx100 "Left point at a distance of 100 meters.";
+CM_ SG_ 2020 LP_FLS_Sx90 "Left point at a distance of 90 meters.";
+CM_ SG_ 2020 LP_FLS_Sx80 "Left point at a distance of 80 meters.";
+CM_ SG_ 2020 LP_FLS_Sx70 "Left point at a distance of 70 meters.";
+CM_ SG_ 2020 LP_FLS_Sx60 "Left point at a distance of 60 meters.";
+CM_ SG_ 2020 LP_FLS_Sx50 "Left point at a distance of 50 meters.";
+CM_ SG_ 2020 LP_FLS_Sx40 "Left point at a distance of 40 meters.";
+CM_ SG_ 2020 LP_FLS_Sx30 "Left point at a distance of 30 meters.";
+CM_ SG_ 2020 LP_FLS_Sx20 "Left point at a distance of 20 meters.";
+CM_ SG_ 2020 LP_FLS_Sx10 "Left point at a distance of 10 meters.";
+CM_ SG_ 2020 LP_FLS_Type "0 - line not found  1 - solid 2- broken  3- Virtual";
+CM_ SG_ 2020 LP_FLS_Sx0 "Left point at a distance of 0 meters.";
+CM_ SG_ 2018 FP_Obj3_Orient "Object Orientation";
+CM_ SG_ 2018 FP_Obj3_DynID "Dynamic ID";
+CM_ SG_ 2018 FP_Obj2_Orient "Object Orientation";
+CM_ SG_ 2018 FP_Obj2_DynID "Dynamic ID";
+CM_ SG_ 2018 FP_Obj2_Sy2 "Lat distande";
+CM_ SG_ 2018 FP_Obj2_Sx2 "Long distance";
+CM_ SG_ 2018 FP_Obj1_DynID "Dynamic ID";
+CM_ SG_ 2018 FP_Obj1_Orient "Object Orientation";
+CM_ SG_ 2018 FP_Obj1_Sy2 "Lat distande";
+CM_ SG_ 2018 FP_Obj1_Sx2 "Long distance";
+CM_ SG_ 2018 FP_Obj3_Vy "Lat speed";
+CM_ SG_ 2018 FP_Obj3_Vx "Long speed";
+CM_ SG_ 2018 FP_Obj3_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2018 FP_Obj3_Sy2 "Lat distande point2";
+CM_ SG_ 2018 FP_Obj3_Sx2 "Long distance point2";
+CM_ SG_ 2018 FP_Obj3_Sy1 "Lat distande point1";
+CM_ SG_ 2018 FP_Obj3_Sx1 "Long distance point1";
+CM_ SG_ 2018 FP_Obj3_Probabil "probability";
+CM_ SG_ 2018 FP_Obj3_Detect "Nearest object in Left lane";
+CM_ SG_ 2018 FP_Obj2_Vy "Lat speed";
+CM_ SG_ 2018 FP_Obj2_Vx "Long speed";
+CM_ SG_ 2018 FP_Obj2_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2018 FP_Obj2_Sy1 "Lat distande";
+CM_ SG_ 2018 FP_Obj2_Sx1 "Long distance";
+CM_ SG_ 2018 FP_Obj2_Probabil "probability";
+CM_ SG_ 2018 FP_Obj2_Detect "Distant object in our lane";
+CM_ SG_ 2018 FP_Obj1_Probabil "probability";
+CM_ SG_ 2018 FP_Obj1_Type "Type of Obj 0- Not object 1-Car 2-Wall 3-Truck 4-Bus 5-Person 6-Moto 7-Animals";
+CM_ SG_ 2018 FP_Obj1_Vy "Lat speed";
+CM_ SG_ 2018 FP_Obj1_Vx "Long speed";
+CM_ SG_ 2018 FP_Obj1_Sy1 "Lat distande";
+CM_ SG_ 2018 FP_Obj1_Sx1 "Long distance";
+CM_ SG_ 2018 FP_Obj1_Detect "Nearest object in our lane";
+CM_ SG_ 1714 TD_AEB_TargetDetect "Data to log about TargetDetect flag";
+CM_ SG_ 1714 TD_AEB_SolverTrans "Data to log about SpeedESP";
+CM_ SG_ 1714 TD_AEB_LogicTrans "Data to log about SpeedIC_";
+CM_ SG_ 1714 TD_AEB_LeadSpeedReal_kmh "Data to log about Speed leader kmh";
+CM_ SG_ 1714 TD_AEB_LeadAccelReal "Data to log about Accel leader";
+CM_ SG_ 1714 TD_AEB_ErrFlag "Data to log about LeadSpeedReal ";
+CM_ SG_ 1714 TD_AEB_ErrCode "Data to log about LeadAccelReal";
+CM_ SG_ 1714 TD_AEB_DistRealm "Data to log about  DistReal m ";
+CM_ SG_ 1713 TD_ACC_ErrCode "Data to log about LeadAccelReal";
+CM_ SG_ 1713 TD_ACC_ErrFlag "Data to log about LeadSpeedReal ";
+CM_ SG_ 1713 TD_ACC_VlcTrans "Data to log about VLC State";
+CM_ SG_ 1713 TD_ACC_SolverTrans "Data to log about SpeedESP";
+CM_ SG_ 1713 TD_ACC_LogicTrans "Data to log about SpeedIC_";
+CM_ SG_ 1713 TD_ACC_LeadAccelReal "Data to log about Accel leader";
+CM_ SG_ 1713 TD_ACC_LeadSpeedReal_kmh "Data to log about Speed leader kmh";
+CM_ SG_ 1713 TD_ACC_DistRealm "Data to log about  DistReal m ";
+CM_ SG_ 1713 TD_ACC_DistSetm "Data to log about  DistSet m";
+CM_ SG_ 1713 TD_ACC_TargetDetect "Data to log about TargetDetect flag";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN_FD";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "FD";
+BA_ "GenMsgCycleTime" BO_ 2000 50;
+BA_ "GenMsgSendType" BO_ 2000 0;
+BA_ "VFrameFormat" BO_ 2000 14;
+BA_ "VFrameFormat" BO_ 1643 0;
+BA_ "GenMsgCycleTime" BO_ 1643 1000;
+BA_ "GenMsgSendType" BO_ 1643 0;
+BA_ "VFrameFormat" BO_ 1642 0;
+BA_ "GenMsgCycleTime" BO_ 1642 1000;
+BA_ "GenMsgSendType" BO_ 1642 0;
+BA_ "VFrameFormat" BO_ 1727 0;
+BA_ "GenMsgCycleTime" BO_ 1727 50;
+BA_ "GenMsgSendType" BO_ 1727 0;
+BA_ "GenMsgSendType" BO_ 1712 0;
+BA_ "GenMsgCycleTime" BO_ 1712 50;
+BA_ "VFrameFormat" BO_ 1712 14;
+BA_ "GenMsgSendType" BO_ 113 0;
+BA_ "GenMsgCycleTime" BO_ 113 50;
+BA_ "VFrameFormat" BO_ 113 0;
+BA_ "GenMsgCycleTime" BO_ 2005 50;
+BA_ "GenMsgSendType" BO_ 2005 0;
+BA_ "VFrameFormat" BO_ 2005 14;
+BA_ "GenMsgSendType" BO_ 262 0;
+BA_ "GenMsgCycleTime" BO_ 262 500;
+BA_ "VFrameFormat" BO_ 262 0;
+BA_ "GenMsgCycleTime" BO_ 2009 50;
+BA_ "GenMsgSendType" BO_ 2009 0;
+BA_ "VFrameFormat" BO_ 2009 14;
+BA_ "GenMsgCycleTime" BO_ 2008 50;
+BA_ "GenMsgSendType" BO_ 2008 0;
+BA_ "VFrameFormat" BO_ 2008 14;
+BA_ "GenMsgCycleTime" BO_ 2007 50;
+BA_ "GenMsgSendType" BO_ 2007 0;
+BA_ "VFrameFormat" BO_ 2007 14;
+BA_ "VFrameFormat" BO_ 2 0;
+BA_ "VFrameFormat" BO_ 105 0;
+BA_ "VFrameFormat" BO_ 104 0;
+BA_ "GenMsgCycleTime" BO_ 2028 50;
+BA_ "GenMsgSendType" BO_ 2028 0;
+BA_ "VFrameFormat" BO_ 2028 14;
+BA_ "GenMsgCycleTime" BO_ 2031 50;
+BA_ "GenMsgSendType" BO_ 2031 0;
+BA_ "VFrameFormat" BO_ 2031 0;
+BA_ "GenMsgSendType" BO_ 2006 0;
+BA_ "GenMsgCycleTime" BO_ 2006 50;
+BA_ "VFrameFormat" BO_ 2006 14;
+BA_ "GenMsgCycleTime" BO_ 2004 50;
+BA_ "GenMsgSendType" BO_ 2004 0;
+BA_ "VFrameFormat" BO_ 2004 14;
+BA_ "VFrameFormat" BO_ 519 0;
+BA_ "VFrameFormat" BO_ 518 0;
+BA_ "VFrameFormat" BO_ 517 0;
+BA_ "VFrameFormat" BO_ 516 0;
+BA_ "VFrameFormat" BO_ 515 0;
+BA_ "VFrameFormat" BO_ 514 0;
+BA_ "VFrameFormat" BO_ 513 0;
+BA_ "GenMsgSendType" BO_ 261 0;
+BA_ "GenMsgCycleTime" BO_ 261 50;
+BA_ "VFrameFormat" BO_ 261 0;
+BA_ "GenMsgSendType" BO_ 103 0;
+BA_ "VFrameFormat" BO_ 103 0;
+BA_ "GenMsgCycleTime" BO_ 103 250;
+BA_ "VFrameFormat" BO_ 102 0;
+BA_ "GenMsgSendType" BO_ 2029 0;
+BA_ "GenMsgCycleTime" BO_ 2029 50;
+BA_ "VFrameFormat" BO_ 2029 14;
+BA_ "GenMsgSendType" BO_ 1 0;
+BA_ "GenMsgCycleTime" BO_ 1 1000;
+BA_ "VFrameFormat" BO_ 1 0;
+BA_ "GenMsgSendType" BO_ 2019 0;
+BA_ "GenMsgCycleTime" BO_ 2019 50;
+BA_ "VFrameFormat" BO_ 2019 14;
+BA_ "GenMsgSendType" BO_ 1774 0;
+BA_ "GenMsgCycleTime" BO_ 1774 50;
+BA_ "VFrameFormat" BO_ 1774 0;
+BA_ "GenMsgSendType" BO_ 2030 0;
+BA_ "GenMsgCycleTime" BO_ 2030 50;
+BA_ "VFrameFormat" BO_ 2030 0;
+BA_ "GenMsgSendType" BO_ 2027 0;
+BA_ "VFrameFormat" BO_ 2027 0;
+BA_ "GenMsgCycleTime" BO_ 2027 50;
+BA_ "GenMsgSendType" BO_ 2026 0;
+BA_ "VFrameFormat" BO_ 2026 0;
+BA_ "GenMsgCycleTime" BO_ 2026 1000;
+BA_ "GenMsgSendType" BO_ 2025 0;
+BA_ "GenMsgCycleTime" BO_ 2025 50;
+BA_ "VFrameFormat" BO_ 2025 14;
+BA_ "GenMsgSendType" BO_ 1732 0;
+BA_ "VFrameFormat" BO_ 1732 0;
+BA_ "GenMsgCycleTime" BO_ 1732 50;
+BA_ "GenMsgSendType" BO_ 2024 0;
+BA_ "GenMsgCycleTime" BO_ 2024 50;
+BA_ "VFrameFormat" BO_ 2024 0;
+BA_ "VFrameFormat" BO_ 2023 0;
+BA_ "GenMsgSendType" BO_ 801 0;
+BA_ "GenMsgCycleTime" BO_ 801 1000;
+BA_ "VFrameFormat" BO_ 801 0;
+BA_ "GenMsgSendType" BO_ 1766 0;
+BA_ "GenMsgCycleTime" BO_ 1766 100;
+BA_ "VFrameFormat" BO_ 1766 14;
+BA_ "GenMsgSendType" BO_ 1765 0;
+BA_ "GenMsgCycleTime" BO_ 1765 100;
+BA_ "VFrameFormat" BO_ 1765 0;
+BA_ "VFrameFormat" BO_ 1763 14;
+BA_ "VFrameFormat" BO_ 1761 0;
+BA_ "GenMsgCycleTime" BO_ 1762 100;
+BA_ "GenMsgSendType" BO_ 1762 0;
+BA_ "VFrameFormat" BO_ 1762 14;
+BA_ "VFrameFormat" BO_ 1760 14;
+BA_ "GenMsgCycleTime" BO_ 2022 50;
+BA_ "GenMsgSendType" BO_ 2022 0;
+BA_ "VFrameFormat" BO_ 2022 14;
+BA_ "VFrameFormat" BO_ 1716 0;
+BA_ "GenMsgCycleTime" BO_ 1716 1000;
+BA_ "GenMsgSendType" BO_ 1716 0;
+BA_ "GenMsgSendType" BO_ 2003 0;
+BA_ "GenMsgCycleTime" BO_ 2003 50;
+BA_ "VFrameFormat" BO_ 2003 14;
+BA_ "GenMsgSendType" BO_ 2021 0;
+BA_ "GenMsgCycleTime" BO_ 2021 50;
+BA_ "VFrameFormat" BO_ 2021 14;
+BA_ "GenMsgSendType" BO_ 2020 0;
+BA_ "GenMsgCycleTime" BO_ 2020 50;
+BA_ "VFrameFormat" BO_ 2020 14;
+BA_ "GenMsgCycleTime" BO_ 2018 50;
+BA_ "GenMsgSendType" BO_ 2018 0;
+BA_ "VFrameFormat" BO_ 2018 14;
+BA_ "GenMsgSendType" BO_ 2016 0;
+BA_ "GenMsgCycleTime" BO_ 2016 50;
+BA_ "VFrameFormat" BO_ 2016 0;
+BA_ "GenMsgSendType" BO_ 2017 0;
+BA_ "GenMsgCycleTime" BO_ 2017 50;
+BA_ "VFrameFormat" BO_ 2017 14;
+BA_ "GenMsgSendType" BO_ 1744 0;
+BA_ "GenMsgCycleTime" BO_ 1744 50;
+BA_ "VFrameFormat" BO_ 1744 0;
+BA_ "GenMsgSendType" BO_ 1731 0;
+BA_ "GenMsgCycleTime" BO_ 1731 50;
+BA_ "VFrameFormat" BO_ 1731 0;
+BA_ "GenMsgSendType" BO_ 1730 0;
+BA_ "GenMsgCycleTime" BO_ 1730 50;
+BA_ "VFrameFormat" BO_ 1730 14;
+BA_ "GenMsgSendType" BO_ 1729 0;
+BA_ "GenMsgCycleTime" BO_ 1729 50;
+BA_ "VFrameFormat" BO_ 1729 0;
+BA_ "GenMsgSendType" BO_ 1728 0;
+BA_ "GenMsgCycleTime" BO_ 1728 50;
+BA_ "VFrameFormat" BO_ 1728 14;
+BA_ "GenMsgSendType" BO_ 1720 0;
+BA_ "GenMsgCycleTime" BO_ 1720 50;
+BA_ "VFrameFormat" BO_ 1720 0;
+BA_ "GenMsgSendType" BO_ 1715 0;
+BA_ "GenMsgCycleTime" BO_ 1715 50;
+BA_ "VFrameFormat" BO_ 1715 0;
+BA_ "GenMsgSendType" BO_ 1714 0;
+BA_ "GenMsgCycleTime" BO_ 1714 50;
+BA_ "VFrameFormat" BO_ 1714 0;
+BA_ "GenMsgSendType" BO_ 1713 0;
+BA_ "GenMsgCycleTime" BO_ 1713 50;
+BA_ "VFrameFormat" BO_ 1713 0;
+VAL_ 1 VerActiveSlot 1 "SLOT_B is Active" 0 "SLOT_A is Active" ;
+

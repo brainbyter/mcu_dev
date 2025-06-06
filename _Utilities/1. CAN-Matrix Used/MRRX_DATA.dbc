@@ -1,0 +1,400 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DASCU CRR CRL
+VAL_TABLE_ SRR_MRR_MODE 1 "MRR_Static_MODE" 0 "SRR_USER_MODE" ;
+VAL_TABLE_ AVP_BSD_TABLE 1 "BSD Mode" 0 "AVP Mode" ;
+VAL_TABLE_ VT_ClusterGear 15 "N/A" 14 "N/A" 13 "N/A" 12 "N/A" 11 "N/A" 10 "N/A" 9 "N/A" 8 "N/A" 7 "Reverse" 6 "N/A" 5 "N/A" 4 "N/A" 3 "N/A" 2 "N/A" 1 "Drive" 0 "Park/Null" ;
+VAL_TABLE_ VT_Cluster_RadarIDentify 3 "Rear Right Corner Radar" 2 "Front Right Corner Radar" 1 "Front Left Corner Radar" 0 "Rear Left Corner Radar" ;
+VAL_TABLE_ VT_Obj_Flg 1 "Active" 0 "No active" ;
+VAL_TABLE_ VT_Obj_Warning 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_TABLE_ VT_Obj_TrackState 7 "lost 5" 6 "lost 4" 5 "lost 3" 4 "lost 2" 3 "lost 1" 2 "cut out" 1 "cut in" 0 "default" ;
+VAL_TABLE_ VT_Obj_MeasState 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Predicited" 2 "Measured" 1 "New" 0 "not Confirmed" ;
+VAL_TABLE_ VT_Obj_RefPoint 9 "Center" 8 "Left" 7 "RL" 6 "Rear" 5 "RR" 4 "Right" 3 "FR" 2 "Front" 1 "FL" 0 "default" ;
+VAL_TABLE_ VT_Obj_DynProp 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "low target" 7 "high target" 6 "cross" 5 "traverse" 4 "going" 3 "approaching" 2 "stop" 1 "static" 0 "default" ;
+VAL_TABLE_ VT_Obj_ProbOfExist 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_TABLE_ VT_Cluster_DynProp 3 "Stop from moving" 2 "Moving from stop" 1 "Moving" 0 "Stop" ;
+VAL_TABLE_ VT_Cluster_ProbOfExist 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+
+
+BO_ 1546 Obj_0_Status_RL: 8 CRL
+ SG_ Obj_CIPVID_RL : 55|8@0+ (1,0) [0|255] ""  DASCU
+ SG_ Obj_FCTBWarning_RL : 47|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_FCTAWarning_RL : 33|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_RCTBWarning_RL : 35|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_RCTAWarning_RL : 37|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_DOWWarning_RL : 39|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_LCAWarning_RL : 25|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_BSDWarning_RL : 27|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_InterfaceVersion_RL : 31|4@0+ (1,0) [0|15] ""  DASCU
+ SG_ Obj_MeasCounter_RL : 15|16@0+ (1,0) [0|65535] ""  DASCU
+ SG_ Obj_NofObject_RL : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 129 RightRadarSynMessage: 8 CRR
+ SG_ RadarTickTimer_R : 39|32@0+ (1,0) [0|4294967295] "ms"  DASCU
+ SG_ FrameCnt_R : 7|32@0+ (1,0) [0|4294967295] ""  DASCU
+
+BO_ 128 LeftRadarSynMessage: 8 CRL
+ SG_ RadarTickTimer_L : 39|32@0+ (1,0) [0|4294967295] "ms"  DASCU
+ SG_ FrameCnt_L : 7|32@0+ (1,0) [0|4294967295] ""  DASCU
+
+BO_ 771 VehInfo_Left_Radar: 8 CRL
+ SG_ Steer_Angle_L : 7|16@0+ (0.1,-900) [-900|900] "deg"  DASCU
+ SG_ GEAR_Sts_L : 26|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ VehSpeed_L : 36|13@0+ (0.05625,0) [0|299.9813] "km/h"  DASCU
+ SG_ YawRate_Raw_L : 55|16@0+ (0.00024,-2.093) [-2.093|2.093] "g"  DASCU
+
+BO_ 773 VehInfo_Right_Radar: 8 CRR
+ SG_ Steer_Angle_R : 7|16@0+ (0.1,-900) [-900|900] "deg"  DASCU
+ SG_ GEAR_Sts_R : 26|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ VehSpeed_R : 36|13@0+ (0.05625,0) [0|299.9813] "km/h"  DASCU
+ SG_ YawRate_Raw_R : 55|16@0+ (0.00024,-2.093) [-2.093|2.093] "g"  DASCU
+
+BO_ 870 Monitor_Time_L_1: 8 CRL
+ SG_ m_ReadPraseTime_L_1 : 23|8@0+ (1,0) [0|65536] "ms"  DASCU
+ SG_ m_TrackingTime_L_1 : 39|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_ClusteringTime_L_1 : 31|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_CanOutputTime_L_1 : 15|8@0+ (1,0) [0|65535] "ms"  DASCU
+ SG_ m_BasebandTime_L_1 : 7|8@0+ (1,0) [0|65535] "ms"  DASCU
+
+BO_ 872 Monitor_Time_R_1: 8 CRR
+ SG_ m_ReadPraseTime_R_1 : 23|8@0+ (1,0) [0|65536] "ms"  DASCU
+ SG_ m_TrackingTime_R_1 : 39|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_ClusteringTime_R_1 : 31|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_CanOutputTime_R_1 : 15|8@0+ (1,0) [0|65535] "ms"  DASCU
+ SG_ m_BasebandTime_R_1 : 7|8@0+ (1,0) [0|65535] "ms"  DASCU
+
+BO_ 871 Monitor_Time_L_2: 8 CRL
+ SG_ m_ReadPraseTime_L_2 : 23|8@0+ (1,0) [0|65536] "ms"  DASCU
+ SG_ m_TrackingTime_L_2 : 39|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_ClusteringTime_L_2 : 31|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_CanOutputTime_L_2 : 15|8@0+ (1,0) [0|65535] "ms"  DASCU
+ SG_ m_BasebandTime_L_2 : 7|8@0+ (1,0) [0|65535] "ms"  DASCU
+
+BO_ 873 Monitor_Time_R_2: 8 CRR
+ SG_ m_ReadPraseTime_R_2 : 23|8@0+ (1,0) [0|65536] "ms"  DASCU
+ SG_ m_TrackingTime_R_2 : 39|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_ClusteringTime_R_2 : 31|8@0+ (1,0) [0|255] "ms"  DASCU
+ SG_ m_CanOutputTime_R_2 : 15|8@0+ (1,0) [0|65535] "ms"  DASCU
+ SG_ m_BasebandTime_R_2 : 7|8@0+ (1,0) [0|65535] "ms"  DASCU
+
+BO_ 1599 Obj_End_Msg_RR: 8 CRR
+ SG_ Radar_block_RR : 26|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Battery_Voltage_too_low_RR : 12|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Battery_Voltage_too_high_RR : 11|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage2_too_high_RR : 10|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage2_too_low_RR : 9|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage1_too_high_RR : 8|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage1_too_low_RR : 7|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Voltage_too_low_RR : 6|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Voltage_too_high_RR : 5|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Temperature_too_low_RR : 4|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Temperature_too_high_RR : 3|1@0+ (1,0) [0|1] ""  DASCU
+
+BO_ 1551 Obj_End_Msg_RL: 8 CRL
+ SG_ Radar_block_RL : 26|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Battery_Voltage_too_low_RL : 12|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Battery_Voltage_too_high_RL : 11|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage2_too_high_RL : 10|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage2_too_low_RL : 9|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage1_too_high_RL : 8|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ RF_Voltage1_too_low_RL : 7|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Voltage_too_low_RL : 6|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Voltage_too_high_RL : 5|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Temperature_too_low_RL : 4|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ MCU_Temperature_too_high_RL : 3|1@0+ (1,0) [0|1] ""  DASCU
+
+BO_ 1596 Obj_Quality_Info_RR: 8 CRR
+ SG_ Obj_CIPV_RR : 33|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Obj_MeasState_RR : 60|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ProbOfExist_RR : 63|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ProbOfClass_RR : 50|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_AccLatRMS_RR : 38|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_AccLonRMS_RR : 27|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_VelLatRMS_RR : 16|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_VelLonRMS_RR : 21|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_DistLatRMS_RR : 10|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_DistLonRMS_RR : 15|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ OBJ_ID_Quality_RR : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1595 Obj_General_Info_RR: 8 CRR
+ SG_ Obj_DynProp_RR : 35|4@0+ (1,0) [0|15] ""  DASCU
+ SG_ Obj_VrelLat_RR : 51|12@0+ (0.05,-102) [-102|102.75] "m/s"  DASCU
+ SG_ Obj_VrelLong_RR : 47|12@0+ (0.05,-102) [-102|102.75] "m/s"  DASCU
+ SG_ Obj_DistLat_RR : 19|15@0+ (0.0078,-128) [-128|127.875] "m"  DASCU
+ SG_ Obj_DistLong_RR : 15|12@0+ (0.0625,-60) [-60|150] "m"  DASCU
+ SG_ OBJ_ID_General_RR : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1597 Obj_Extended_Info_RR: 8 CRR
+ SG_ Obj_Height_RR : 63|5@0+ (0.5,-10) [-10|21.5] ""  DASCU
+ SG_ Obj_Width_RR : 44|5@0+ (0.1,0) [0|3.1] "m"  DASCU
+ SG_ Obj_Length_RR : 55|8@0+ (0.1,0) [0|25.5] "m"  DASCU
+ SG_ Obj_OrienAngle_RR : 38|10@0+ (0.4,-180) [-180|180] "deg"  DASCU
+ SG_ Obj_Class_RR : 25|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ArelLat_RR : 20|11@0+ (0.04,-40) [-40|40] "m/s^2"  DASCU
+ SG_ Obj_ArelLon_RR : 15|11@0+ (0.04,-40) [-40|40] "m/s^2"  DASCU
+ SG_ OBJ_ID_Extended_RR : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1598 Obj_Collision_Info_RR: 8 CRR
+ SG_ m_FCTAArea_RR : 53|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_RCWArea_RR : 55|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_RCTAArea_RR : 41|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_DOWArea_RR : 43|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_LCAArea_RR : 45|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_BSDArea_RR : 47|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_TrackState_RR : 11|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_YawRate_RR : 29|10@0+ (0.01,-3.14) [-3.14|3.14] "rad/s"  DASCU
+ SG_ Obj_CornerRelWid_RR : 8|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_CornerRelLen_RR : 19|6@0+ (1,0) [0|63] ""  DASCU
+ SG_ Obj_RefPoint_RR : 15|4@0+ (1,0) [0|9] ""  DASCU
+ SG_ OBJ_ID_Collision_RR : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1594 Obj_0_Status_RR: 8 CRR
+ SG_ Obj_CIPVID_RR : 55|8@0+ (1,0) [0|255] ""  DASCU
+ SG_ Obj_FCTBWarning_RR : 47|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_FCTAWarning_RR : 33|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_RCTBWarning_RR : 35|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_RCTAWarning_RR : 37|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_DOWWarning_RR : 39|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_LCAWarning_RR : 25|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_BSDWarning_RR : 27|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_InterfaceVersion_RR : 31|4@0+ (1,0) [0|15] ""  DASCU
+ SG_ Obj_MeasCounter_RR : 15|16@0+ (1,0) [0|65535] ""  DASCU
+ SG_ Obj_NofObject_RR : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1550 Obj_Collision_Info_RL: 8 CRL
+ SG_ m_FCTAArea_RL : 53|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_RCWArea_RL : 55|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_RCTAArea_RL : 41|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_DOWArea_RL : 43|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_LCAArea_RL : 45|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ m_BSDArea_RL : 47|2@0+ (1,0) [0|3] ""  DASCU
+ SG_ Obj_TrackState_RL : 11|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_YawRate_RL : 29|10@0+ (0.01,-3.14) [-3.14|3.14] "rad/s"  DASCU
+ SG_ Obj_CornerRelWid_RL : 8|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_CornerRelLen_RL : 19|6@0+ (1,0) [0|63] ""  DASCU
+ SG_ Obj_RefPoint_RL : 15|4@0+ (1,0) [0|9] ""  DASCU
+ SG_ OBJ_ID_Collision_RL : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1549 Obj_Extended_Info_RL: 8 CRL
+ SG_ Obj_Height_RL : 63|5@0+ (0.5,-10) [-10|21.5] ""  DASCU
+ SG_ Obj_Width_RL : 44|5@0+ (0.1,0) [0|3.1] "m"  DASCU
+ SG_ Obj_Length_RL : 55|8@0+ (0.1,0) [0|25.5] "m"  DASCU
+ SG_ Obj_OrienAngle_RL : 38|10@0+ (0.4,-180) [-180|180] "deg"  DASCU
+ SG_ Obj_Class_RL : 25|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ArelLat_RL : 20|11@0+ (0.04,-40) [-40|40] "m/s^2"  DASCU
+ SG_ Obj_ArelLon_RL : 15|11@0+ (0.04,-40) [-40|40] "m/s^2"  DASCU
+ SG_ OBJ_ID_Extended_RL : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1548 Obj_Quality_Info_RL: 8 CRL
+ SG_ Obj_CIPV_RL : 33|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ Obj_MeasState_RL : 60|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ProbOfExist_RL : 63|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_ProbOfClass_RL : 50|3@0+ (1,0) [0|7] ""  DASCU
+ SG_ Obj_AccLatRMS_RL : 38|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_AccLonRMS_RL : 27|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_VelLatRMS_RL : 16|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_VelLonRMS_RL : 21|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_DistLatRMS_RL : 10|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ Obj_DistLonRMS_RL : 15|5@0+ (1,0) [0|31] ""  DASCU
+ SG_ OBJ_ID_Quality_RL : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_ 1152 Radar_Rear_ADAS: 8 CRR
+ SG_ ADAS_TimeDiff : 55|16@0- (1,0) [-32768|32767] "ms"  DASCU
+ SG_ ADAS_RCW_W : 41|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_FCW_W : 43|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_FCTB_R_W : 45|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_FCTB_L_W : 47|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_FCTA_R_W : 33|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_FCTA_L_W : 35|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_RCTB_R_W : 37|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_RCTB_L_W : 39|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_RCTA_R_W : 25|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_RCTA_L_W : 27|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_DOW_R_W : 29|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_DOW_L_W : 31|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_LCA_R_W : 17|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_LCA_L_W : 19|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_BSD_R_W : 21|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_BSD_L_W : 23|2@0+ (1,0) [0|2] ""  DASCU
+ SG_ ADAS_RCW_FLG : 8|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_FCW_FLG : 9|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_FCTB_R_FLG : 10|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_FCTB_L_FLG : 11|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_FCTA_R_FLG : 12|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_FCTA_L_FLG : 13|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_RCTB_R_FLG : 14|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_RCTB_L_FLG : 15|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_RCTA_R_FLG : 0|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_RCTA_L_FLG : 1|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_LCA_R_FLG : 2|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_LCA_L_FLG : 3|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_DOW_R_FLG : 4|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_DOW_L_FLG : 5|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_BSD_R_FLG : 6|1@0+ (1,0) [0|1] ""  DASCU
+ SG_ ADAS_BSD_L_FLG : 7|1@0+ (1,0) [0|1] ""  DASCU
+
+BO_ 1547 Obj_General_Info_RL: 8 CRL
+ SG_ Obj_DynProp_RL : 35|4@0+ (1,0) [0|15] ""  DASCU
+ SG_ Obj_VrelLat_RL : 51|12@0+ (0.05,-102) [-102|102.75] "m/s"  DASCU
+ SG_ Obj_VrelLong_RL : 47|12@0+ (0.05,-102) [-102|102.75] "m/s"  DASCU
+ SG_ Obj_DistLat_RL : 19|15@0+ (0.0078,-128) [-128|127.875] "m"  DASCU
+ SG_ Obj_DistLong_RL : 15|12@0+ (0.0625,-60) [-60|150] "m"  DASCU
+ SG_ OBJ_ID_General_RL : 7|8@0+ (1,0) [0|255] ""  DASCU
+
+BO_TX_BU_ 1152 : CRL,CRR;
+
+
+CM_ SG_ 129 RadarTickTimer_R "RADAR operating time in this power cycle.";
+CM_ SG_ 128 RadarTickTimer_L "RADAR operating time in this power cycle.";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Spontaneous","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "MRRX_DATA";
+BA_ "GenMsgCycleTime" BO_ 1546 50;
+BA_ "VFrameFormat" BO_ 1546 14;
+BA_ "VFrameFormat" BO_ 129 14;
+BA_ "VFrameFormat" BO_ 128 14;
+BA_ "VFrameFormat" BO_ 771 14;
+BA_ "VFrameFormat" BO_ 773 14;
+BA_ "VFrameFormat" BO_ 870 14;
+BA_ "VFrameFormat" BO_ 872 14;
+BA_ "VFrameFormat" BO_ 871 14;
+BA_ "VFrameFormat" BO_ 873 14;
+BA_ "VFrameFormat" BO_ 1599 14;
+BA_ "GenMsgCycleTime" BO_ 1551 50;
+BA_ "VFrameFormat" BO_ 1551 14;
+BA_ "VFrameFormat" BO_ 1596 14;
+BA_ "VFrameFormat" BO_ 1595 14;
+BA_ "VFrameFormat" BO_ 1597 14;
+BA_ "GenMsgCycleTime" BO_ 1598 50;
+BA_ "VFrameFormat" BO_ 1598 14;
+BA_ "GenMsgCycleTime" BO_ 1594 50;
+BA_ "VFrameFormat" BO_ 1594 14;
+BA_ "GenMsgCycleTime" BO_ 1550 50;
+BA_ "VFrameFormat" BO_ 1550 14;
+BA_ "VFrameFormat" BO_ 1549 14;
+BA_ "VFrameFormat" BO_ 1548 14;
+BA_ "VFrameFormat" BO_ 1152 14;
+BA_ "VFrameFormat" BO_ 1547 14;
+VAL_ 1546 Obj_FCTBWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_FCTAWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_RCTBWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_RCTAWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_DOWWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_LCAWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1546 Obj_BSDWarning_RL 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1596 Obj_CIPV_RR 1 "Active" 0 "No active" ;
+VAL_ 1596 Obj_MeasState_RR 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Predicited" 2 "Measured" 1 "New" 0 "not Confirmed" ;
+VAL_ 1596 Obj_ProbOfExist_RR 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_ 1596 Obj_ProbOfClass_RR 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_ 1595 Obj_DynProp_RR 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "low target" 7 "high target" 6 "cross" 5 "traverse" 4 "going" 3 "approaching" 2 "stop" 1 "static" 0 "default" ;
+VAL_ 1598 Obj_RefPoint_RR 9 "Center" 8 "Left" 7 "RL" 6 "Rear" 5 "RR" 4 "Right" 3 "FR" 2 "Front" 1 "FL" 0 "default" ;
+VAL_ 1594 Obj_FCTBWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_FCTAWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_RCTBWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_RCTAWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_DOWWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_LCAWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1594 Obj_BSDWarning_RR 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1550 Obj_RefPoint_RL 9 "Center" 8 "Left" 7 "RL" 6 "Rear" 5 "RR" 4 "Right" 3 "FR" 2 "Front" 1 "FL" 0 "default" ;
+VAL_ 1548 Obj_CIPV_RL 1 "Active" 0 "No active" ;
+VAL_ 1548 Obj_MeasState_RL 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Predicited" 2 "Measured" 1 "New" 0 "not Confirmed" ;
+VAL_ 1548 Obj_ProbOfExist_RL 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_ 1548 Obj_ProbOfClass_RL 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_ 1152 ADAS_RCW_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_FCW_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_FCTB_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_FCTB_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_FCTA_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_FCTA_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_RCTB_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_RCTB_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_RCTA_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_RCTA_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_DOW_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_DOW_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_LCA_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_LCA_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_BSD_R_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_BSD_L_W 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_ 1152 ADAS_RCW_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_FCW_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_FCTB_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_FCTB_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_FCTA_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_FCTA_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_RCTB_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_RCTB_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_RCTA_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_RCTA_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_LCA_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_LCA_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_DOW_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_DOW_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_BSD_R_FLG 1 "Active" 0 "No active" ;
+VAL_ 1152 ADAS_BSD_L_FLG 1 "Active" 0 "No active" ;
+VAL_ 1547 Obj_DynProp_RL 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "low target" 7 "high target" 6 "cross" 5 "traverse" 4 "going" 3 "approaching" 2 "stop" 1 "static" 0 "default" ;
+

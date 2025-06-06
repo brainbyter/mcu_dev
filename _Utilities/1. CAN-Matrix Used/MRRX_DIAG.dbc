@@ -1,0 +1,135 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DAS CRR CRL
+VAL_TABLE_ SRR_MRR_MODE 1 "MRR_Static_MODE" 0 "SRR_USER_MODE" ;
+VAL_TABLE_ AVP_BSD_TABLE 1 "BSD Mode" 0 "AVP Mode" ;
+VAL_TABLE_ VT_ClusterGear 15 "N/A" 14 "N/A" 13 "N/A" 12 "N/A" 11 "N/A" 10 "N/A" 9 "N/A" 8 "N/A" 7 "Reverse" 6 "N/A" 5 "N/A" 4 "N/A" 3 "N/A" 2 "N/A" 1 "Drive" 0 "Park/Null" ;
+VAL_TABLE_ VT_Cluster_RadarIDentify 3 "Rear Right Corner Radar" 2 "Front Right Corner Radar" 1 "Front Left Corner Radar" 0 "Rear Left Corner Radar" ;
+VAL_TABLE_ VT_Obj_Flg 1 "Active" 0 "No active" ;
+VAL_TABLE_ VT_Obj_Warning 2 "2 Level Alarm" 1 "1 Level Alarm" 0 "No Alarm" ;
+VAL_TABLE_ VT_Obj_TrackState 7 "lost 5" 6 "lost 4" 5 "lost 3" 4 "lost 2" 3 "lost 1" 2 "cut out" 1 "cut in" 0 "default" ;
+VAL_TABLE_ VT_Obj_MeasState 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Predicited" 2 "Measured" 1 "New" 0 "not Confirmed" ;
+VAL_TABLE_ VT_Obj_RefPoint 9 "Center" 8 "Left" 7 "RL" 6 "Rear" 5 "RR" 4 "Right" 3 "FR" 2 "Front" 1 "FL" 0 "default" ;
+VAL_TABLE_ VT_Obj_DynProp 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "low target" 7 "high target" 6 "cross" 5 "traverse" 4 "going" 3 "approaching" 2 "stop" 1 "static" 0 "default" ;
+VAL_TABLE_ VT_Obj_ProbOfExist 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_TABLE_ VT_Cluster_DynProp 3 "Stop from moving" 2 "Moving from stop" 1 "Moving" 0 "Stop" ;
+VAL_TABLE_ VT_Cluster_ProbOfExist 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Obj_CIPV : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Obj_MeasState : 0|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Obj_ProbOfExist : 0|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Obj_ProbOfClass : 0|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Obj_AccLatRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Obj_AccLonRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Obj_VelLatRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Obj_VelLonRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Obj_DistLatRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ Obj_DistLonRMS : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ OBJ_ID : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 769 VehInfo2: 8 DAS
+ SG_ IGN_State_V : 13|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ IGN_State : 12|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ GEAR_STA_NOW_V : 3|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ GEAR_STATE_NOW : 6|3@0+ (1,0) [0|7] ""  CRR,CRL
+
+BO_ 768 VehInfo1: 8 DAS
+ SG_ VehSpeed_V : 7|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ YawRate_IN : 23|16@0+ (0.00024,-2.093) [-2.093|2.093] "rad/s"  CRR,CRL
+ SG_ YawRat_V : 6|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ VehSpeed_IN : 4|13@0+ (0.05625,0) [0|299.9813] "km/h"  CRR,CRL
+ SG_ Str_Angle_V : 5|1@0+ (1,0) [0|1] ""  CRR,CRL
+ SG_ Str_Angle : 39|16@0+ (0.1,-900) [-900|900] "deg"  CRR,CRL
+
+BO_ 793 VehInfo3: 8 DAS
+ SG_ RightTurnSWSts : 49|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ LeftTurnSWSts : 50|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ RRDoorSts : 19|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ PassengerDoorSts : 20|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ RLDoorSts : 21|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ DriverDoorSts : 22|1@0+ (1,0) [0|0] ""  CRR,CRL
+ SG_ LockSts : 23|1@0+ (1,0) [0|0] ""  CRR,CRL
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Spontaneous","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "MRRX_DIAG";
+BA_ "GenMsgCycleTime" BO_ 769 50;
+BA_ "VFrameFormat" BO_ 769 0;
+BA_ "GenMsgCycleTime" BO_ 768 50;
+BA_ "VFrameFormat" BO_ 768 0;
+BA_ "GenMsgCycleTime" BO_ 793 50;
+BA_ "VFrameFormat" BO_ 793 0;
+VAL_ 3221225472 Obj_CIPV 1 "Active" 0 "No active" ;
+VAL_ 3221225472 Obj_MeasState 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Predicited" 2 "Measured" 1 "New" 0 "not Confirmed" ;
+VAL_ 3221225472 Obj_ProbOfExist 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+VAL_ 3221225472 Obj_ProbOfClass 7 "<=100%" 6 "<99.9%" 5 "<99%" 4 "<90%" 3 "<75%" 2 "<50%" 1 "<25%" 0 "invalid" ;
+

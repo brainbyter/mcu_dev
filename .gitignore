@@ -1,0 +1,15 @@
+/obj
+/obj_slot_A
+/obj_slot_B
+*.hex
+*.elf
+*.map
+*.mdf
+*.o
+*.src
+cc*?a
+/Debug
+*.bat
+*.ini
+/slot_a.bat
+/slot_b.bat
